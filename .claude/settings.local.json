@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dohistory.org)",
+      "WebFetch(domain:pandemic-journaling-project.chip.uconn.edu)",
+      "WebFetch(domain:pjp-featuredentries.core.uconn.edu)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Projects\\\\loguo-service\\\\data\\\\\" -Force 2>&1 | Select-Object FullName)"
+    ]
+  }
+}
