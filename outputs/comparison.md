@@ -4,35 +4,35 @@
 
 | Condition                         | Entries | Themes | Runtime |
 |-----------------------------------|---------|--------|---------|
-| condition1                        | 500     | 5      | 17.9s |
-| condition2                        | 500     | 21     | 85.6s |
-| condition3                        | 500     | 20     | 142.0s |
-| condition4                        | 500     | 20     | 82.4s |
+| LLM Only Baseline                 | 500     | 5      | 21.1s |
+| BERTopic + LFE                    | 500     | 21     | 96.7s |
+| Hierarchical Clustering + LLM Labels | 500     | 20     | 582.6s |
+| Hierarchical Clustering + Keyword Labels | 500     | 20     | 50.8s |
 
 ## Main Themes
 
-### [condition1]
-- Family and Parenthood
-- Health and Personal Well-being
-- Home and Lifestyle Changes
-- Social Interactions and Community
-- Work-Life Balance
+### [LLM Only Baseline]
+- Motherhood and Parenting Challenges
+- Family Dynamics
+- Humor and Levity in Daily Life
+- Self-Reflection and Personal Growth
+- Mental Health and Well-being
 
-### [condition2]
-- 0_like_just_know_leta
-- 2_room_nursery_ikea_office
-- 10_leaves_tree_marshall_guessing
-- 8_concentrate_chuck_inanimate_look
-- 7_lotion_lips_hair_wigs
+### [BERTopic + LFE]
+- 0_Parenting and Anxiety
+- 2_Home decoration projects
+- 10_Nature and Inspiration
+- 8_Dog behavior antics
+- 7_Beauty and personal care
 
-### [condition3]
-- Parenting Challenges and Humor
-- Nostalgia and Parenting
-- Childlike Perspective and Boundaries
-- Frustration and Exasperation
-- Scent as Emotional Anchor
+### [Hierarchical Clustering + LLM Labels]
+- Parenting Chaos and Humor
+- Nostalgia and Humor
+- Childhood Innocence and Embarrassment
+- Chaotic domestic life
+- Sensory Comfort and Memory
 
-### [condition4]
+### [Hierarchical Clustering + Keyword Labels]
 - jon / leta / baby
 - hours / times / television
 - working / uncomfortable / taking
@@ -41,44 +41,44 @@
 
 ## Surprising Patterns
 
-### [condition1]
-- The author’s humor is a consistent coping mechanism throughout challenges, particularly in stressful situations related to parenting.
-- There is a notable shift in the author’s approach to personal health and well-being, moving from a focus on the physical changes of pregnancy to a broader reflection on mental health and balance over time.
-- The frequent discussions around food preferences, particularly with the children, reveal an underlying theme of the struggles of parenting and familial expectations.
+### [LLM Only Baseline]
+- The frequent use of humor, even in stressful parenting situations, suggests that the journaler relies on laughter to cope with stress.
+- The evolution from concerns about personal mental health to a more stable identity as a mother and individual indicates personal growth.
+- The consistency in reflective practices demonstrates a strong engagement with self-discovery over the years.
 
-### [condition2]
-- Despite the high volume of entries related to family (including children), the first-person pronoun ratio is relatively low, indicating potential avoidance of personal feelings.
-- The high average word count suggests a tendency toward expansive narratives, yet recurrent themes of dissatisfaction and negativity are present, indicated by frequent use of negations.
-- Themes around consumer products (e.g., nursery furniture and clothing) occur alongside emotional themes, hinting at possible materialism as a coping mechanism.
+### [BERTopic + LFE]
+- The dominant focus on 'Parenting and Anxiety' with 190 entries indicates a significant emotional preoccupation during this timeframe, suggesting that parenting was a source of both joy and stress.
+- The low number of entries related to broader topics such as 'Nature and Inspiration' and 'Children's literary experiences' implies that literary and creative exploration may have taken a backseat to more immediate concerns.
+- The 44 entries focused on 'Naming a baby' highlight an intense engagement with identity and familial roles, more than many other common themes associated with parenting.
 
-### [condition3]
-- The almost exclusive focus on humor and parenting challenges suggests a coping mechanism, indicating that the writer may use humor to handle stress in parenthood more than addressing deeper emotional or psychological complexities.
-- Despite the profound challenges underlying parenting, the very few entries touching on themes of emotional manipulation or trust indicate either a strong avoidance of these topics or a healthy boundary-setting within personal relationships.
-- The predominance of light-hearted themes contrasted with a sparse representation of critical reflections suggests a possibility that the writer may strategically choose to focus on the positive aspects of their life to cope with potential underlying frustrations.
+### [Hierarchical Clustering + LLM Labels]
+- The overwhelming dominance of 'Parenting Chaos and Humor' indicates a singularity of focus that transcends the diversity of themes expected in a typical journal corpus.
+- The limited number of entries reflecting deep emotional themes such as emotional manipulation, trust, and nostalgia suggests either a potential avoidance of these topics or a prioritization of humor and lightheartedness in daily coping.
+- Relatively low engagement with themes of interpersonal conflict or critique might indicate a strong desire for harmony or a deliberate choice to maintain a positive narrative in personal reflections.
 
-### [condition4]
-- The overwhelming frequency of mentions related to 'jon', 'leta', and 'baby' suggests that family dynamics played a crucial role, overshadowing other areas of life.
-- The minimal entries related to work ('working', 'uncomfortable', 'taking') indicate a potential avoidance of professional themes despite the presence of notable life transitions.
-- The mention of leisure activities ('lotion', 'wine', 'lips') juxtaposed with domestic themes suggests an attempt to balance self-care amidst familial responsibilities.
+### [Hierarchical Clustering + Keyword Labels]
+- The overwhelming majority of entries (440) revolve around a few key themes, indicating a narrow focus in the journaler's life during this period.
+- Despite a rich emotional context suggested by the frequent references to family, the low First-person pronoun ratio (0.0615) implies a possible externalization of thoughts rather than a deep internal reflection.
+- The minimal presence of common stress-related themes (e.g., work, discomfort) contrasts sharply with the strong focus on personal relationships, potentially indicating a coping mechanism through writing.
 
 ## Reflection Questions
 
-### [condition1]
-1. How have my experiences influenced my understanding of parenting and family dynamics?
-2. What have been the most significant changes in my personal health and well-being since becoming a parent?
-3. In what ways have my relationships with friends and community evolved during this time?
+### [LLM Only Baseline]
+1. How has my understanding of motherhood changed since the early days of parenting?
+2. What role does humor play in my daily life and in coping with challenges?
+3. How do I balance my personal needs with the demands of family life?
 
-### [condition2]
-1. What emotions or thoughts are underlying the frequent mentions of children and family, and how do these reflect my current state of happiness?
-2. How do my references to material items relate to my emotional well-being and sense of identity?
-3. In what ways do I communicate or avoid communicating about my feelings in these journal entries?
+### [BERTopic + LFE]
+1. How did the challenges of parenting influence my mental well-being and daily experiences during this time?
+2. What specific moments or experiences stood out as particularly joyful or anxiety-inducing in my parenting journey?
+3. In what ways did the creative activities I engaged in, such as home decoration or photography, serve as outlets for stress relief?
 
-### [condition3]
-1. How does humor play a role in my approach to managing the challenges of parenthood?
-2. What emotions or themes do I tend to avoid in my journal entries, and why might that be?
-3. In what ways do I use nostalgia as a lens to reflect on my current life situations?
+### [Hierarchical Clustering + LLM Labels]
+1. How does humor serve as a coping mechanism in my parenting journey?
+2. What underlying emotions might be influencing my sparse reflections on conflict and deeper emotional issues?
+3. In what ways do my childhood experiences shape my current identity and parenting style?
 
-### [condition4]
-1. How has the focus on 'jon', 'leta', and the concept of 'baby' influenced my sense of identity?
-2. In what ways do I use television and media as a means of escapism from daily challenges?
-3. What emotions arise when reflecting on the balance between my personal life and professional responsibilities?
+### [Hierarchical Clustering + Keyword Labels]
+1. What emotions do I associate with writing about Jon and Leta, and how does this reflect my current relationships?
+2. How have my thoughts and feelings changed regarding the themes of family and domestic life over time?
+3. Why do I choose to write about certain topics more than others, and what does this reveal about my priorities?

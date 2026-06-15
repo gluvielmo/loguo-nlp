@@ -27,14 +27,12 @@ def run(csv_path: str, source: str, n_clusters: int = 20) -> ConditionArtifacts:
 
     lfe_list = extract_batch(entries)
 
-    report = generate("condition3_hierarchical_llm", entries, clusters, lfe_list)
+    report = generate("Hierarchical Clustering + LLM Labels", entries, clusters, lfe_list)
 
     runtime = time.time() - start
 
-    from statistics import mean
-
     return ConditionArtifacts(
-        condition="condition3",
+        condition="Hierarchical Clustering + LLM Labels",
         corpus_id=source,
         run_timestamp=datetime.utcnow(),
         report=report,

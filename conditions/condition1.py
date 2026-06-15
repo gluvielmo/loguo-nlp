@@ -63,7 +63,7 @@ Respond with a JSON object with exactly these keys:
     data = json.loads(response.choices[0].message.content)
 
     report = Report(
-        condition_name="condition1_llm_only",
+        condition_name="LLM Only Baseline",
         corpus_size=len(entries),
         date_range=(min(e.date for e in entries), max(e.date for e in entries)),
         generated_at=datetime.utcnow(),
@@ -83,7 +83,7 @@ Respond with a JSON object with exactly these keys:
     runtime = time.time() - start
 
     return ConditionArtifacts(
-        condition="condition1",
+        condition="LLM Only Baseline",
         corpus_id=source,
         run_timestamp=datetime.utcnow(),
         report=report,

@@ -25,12 +25,12 @@ def run(csv_path: str, source: str) -> ConditionArtifacts:
 
     lfe_list = extract_batch(entries)
 
-    report = generate("condition2_bertopic", entries, clusters, lfe_list)
+    report = generate("BERTopic + LFE", entries, clusters, lfe_list)
 
     runtime = time.time() - start
 
     return ConditionArtifacts(
-        condition="condition2",
+        condition="BERTopic + LFE",
         corpus_id=source,
         run_timestamp=datetime.utcnow(),
         report=report,

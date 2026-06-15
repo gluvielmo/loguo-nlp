@@ -1,11 +1,16 @@
 import numpy as np
 from bertopic import BERTopic
+from bertopic.representation import OpenAI as BERTopicOpenAI
 from umap import UMAP
 from hdbscan import HDBSCAN
+from openai import OpenAI
+from dotenv import load_dotenv
 
 from sklearn.feature_extraction.text import CountVectorizer
 
 from pipeline.schemas import Cluster, JournalEntry, TopicAssignment
+
+load_dotenv()
 
 def build_models(n_docs: int) -> tuple[BERTopic, UMAP, HDBSCAN]:
     n_neighbors = min(10, n_docs // 3)
@@ -31,13 +36,16 @@ def build_models(n_docs: int) -> tuple[BERTopic, UMAP, HDBSCAN]:
         token_pattern = r"(?u)\b[a-zA-Z]{3,}\b", #ballard's
     )
 
+    representation_model = BERTopicOpenAI(OpenAI(), model="gpt-4o-mini", chat=True)
+
     topic_model = BERTopic(
-        umap_model    = umap_model,
-        hdbscan_model = hdbscan_model,
-        vectorizer_model = vectorizer,
+        umap_model=umap_model,
+        hdbscan_model=hdbscan_model,
+        vectorizer_model=vectorizer,
+        representation_model=representation_model,
         nr_topics="auto",
         min_topic_size=5,
-        verbose       = False,
+        verbose=False,
     )
     return topic_model, umap_model, hdbscan_model
 
