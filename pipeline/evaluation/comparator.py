@@ -11,44 +11,44 @@ def load_artifacts(run_dir: str | Path) -> ConditionArtifacts:
     return ConditionArtifacts.model_validate(data)
 
 
-def compare(run_dirs: list[str | Path]) -> None:
+def compare(run_dirs: list[str | Path], output_path: str | Path = "outputs/comparison.md") -> Path:
     all_artifacts = [load_artifacts(d) for d in run_dirs]
+    lines = []
 
-    print(f"\n{'=' * 60}")
-    print("CONDITION COMPARISON")
-    print(f"{'=' * 60}\n")
+    lines += ["# Condition Comparison", ""]
 
-    print(f"{'Condition':<35} {'Entries':<10} {'Themes':<10} {'Runtime'}")
-    print("-" * 65)
+    lines += ["## Summary", ""]
+    lines += [f"| {'Condition':<33} | {'Entries':<7} | {'Themes':<6} | Runtime |"]
+    lines += [f"|{'-'*35}|{'-'*9}|{'-'*8}|---------|"]
     for a in all_artifacts:
         r = a.report
-        print(
-            f"{a.condition:<35} "
-            f"{r.corpus_size:<10} "
-            f"{len(r.main_themes):<10} "
-            f"{a.runtime_seconds:.1f}s"
+        lines.append(
+            f"| {a.condition:<33} | {r.corpus_size:<7} | {len(r.main_themes):<6} | {a.runtime_seconds:.1f}s |"
         )
 
-    print(f"\n{'=' * 60}")
-    print("MAIN THEMES PER CONDITION")
-    print(f"{'=' * 60}")
+    lines += ["", "## Main Themes", ""]
     for a in all_artifacts:
-        print(f"\n[{a.condition}]")
+        lines.append(f"### [{a.condition}]")
         for theme in a.report.main_themes[:5]:
-            print(f"  - {theme.name}")
+            lines.append(f"- {theme.name}")
+        lines.append("")
 
-    print(f"\n{'=' * 60}")
-    print("SURPRISING PATTERNS")
-    print(f"{'=' * 60}")
+    lines += ["## Surprising Patterns", ""]
     for a in all_artifacts:
-        print(f"\n[{a.condition}]")
+        lines.append(f"### [{a.condition}]")
         for p in a.report.surprising_patterns[:3]:
-            print(f"  • {p}")
+            lines.append(f"- {p}")
+        lines.append("")
 
-    print(f"\n{'=' * 60}")
-    print("REFLECTION QUESTIONS")
-    print(f"{'=' * 60}")
+    lines += ["## Reflection Questions", ""]
     for a in all_artifacts:
-        print(f"\n[{a.condition}]")
+        lines.append(f"### [{a.condition}]")
         for i, q in enumerate(a.report.reflection_questions[:3], 1):
-            print(f"  {i}. {q}")
+            lines.append(f"{i}. {q}")
+        lines.append("")
+
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"Comparison saved to {output_path}")
+    return output_path

@@ -20,23 +20,20 @@ def _get_client() -> OpenAI:
     return _client
 
 
-def run(csv_path: str, source: str, sample_size: int = 50) -> ConditionArtifacts:
+def run(csv_path: str, source: str) -> ConditionArtifacts:
     start = time.time()
 
     entries = load_entries(csv_path, source=source)
     entries = entries[:500]
 
-    step = max(1, len(entries) // sample_size)
-    sampled = entries[::step][:sample_size]
-
     entry_lines = "\n\n".join(
         f"[{e.date}] {e.text[:400]}"
-        for e in sampled
+        for e in entries
     )
 
     prompt = f"""You are analyzing a longitudinal journal corpus spanning multiple years.
 
-Below are {len(sampled)} journal entries sampled evenly across the full date range:
+Below are {len(entries)} journal entries in chronological order:
 
 {entry_lines}
 
