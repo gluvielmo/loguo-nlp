@@ -4,7 +4,7 @@ from pipeline.embeddings.embedder import _get_client
 from pipeline.schemas import Cluster, JournalEntry
 
 
-def label_cluster(cluster: Cluster, entries_by_id: dict[str, JournalEntry]) -> Cluster:
+def label_cluster(cluster: Cluster, entries_by_id: dict[str, JournalEntry]) -> tuple[Cluster, int, int]:
     texts = [entries_by_id[eid].text for eid in cluster.representative_entry_ids]
 
     formatted_texts = "\n---\n".join(
@@ -39,13 +39,22 @@ def label_cluster(cluster: Cluster, entries_by_id: dict[str, JournalEntry]) -> C
     )
 
     data = json.loads(response.choices[0].message.content)
+    usage = response.usage
 
     return cluster.model_copy(update={
         "label": data["label"],
         "description": data["description"],
         "subthemes": data["subthemes"],
         "labeling_method": "llm"
-    })
+    }), usage.prompt_tokens, usage.completion_tokens
 
-def label_all(clusters: list[Cluster], entries_by_id: dict[str, JournalEntry]) -> list[Cluster]:
-    return [label_cluster(c, entries_by_id) for c in clusters]
+
+def label_all(clusters: list[Cluster], entries_by_id: dict[str, JournalEntry]) -> tuple[list[Cluster], int, int]:
+    result = []
+    total_in, total_out = 0, 0
+    for c in clusters:
+        labeled, inp, out = label_cluster(c, entries_by_id)
+        result.append(labeled)
+        total_in += inp
+        total_out += out
+    return result, total_in, total_out

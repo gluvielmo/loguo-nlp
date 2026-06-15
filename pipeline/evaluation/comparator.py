@@ -18,12 +18,15 @@ def compare(run_dirs: list[str | Path], output_path: str | Path = "outputs/compa
     lines += ["# Condition Comparison", ""]
 
     lines += ["## Summary", ""]
-    lines += [f"| {'Condition':<33} | {'Entries':<7} | {'Themes':<6} | Runtime |"]
-    lines += [f"|{'-'*35}|{'-'*9}|{'-'*8}|---------|"]
+    lines += ["| Condition | Entries | Themes | Runtime | Preproc | LLM calls | In tokens | Out tokens | Embed tokens | Est. cost |"]
+    lines += ["|-----------|---------|--------|---------|---------|-----------|-----------|------------|--------------|-----------|"]
     for a in all_artifacts:
-        r = a.report
+        m = a.metrics
         lines.append(
-            f"| {a.condition:<33} | {r.corpus_size:<7} | {len(r.main_themes):<6} | {a.runtime_seconds:.1f}s |"
+            f"| {a.condition} | {a.report.corpus_size} | {len(a.report.main_themes)} "
+            f"| {m.total_seconds:.1f}s | {m.preprocessing_seconds:.1f}s "
+            f"| {m.llm_calls} | {m.input_tokens:,} | {m.output_tokens:,} "
+            f"| {m.embedding_tokens:,} | ${m.estimated_cost_usd:.4f} |"
         )
 
     lines += ["", "## Main Themes", ""]

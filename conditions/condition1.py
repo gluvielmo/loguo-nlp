@@ -6,8 +6,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from pipeline.costs import GENERATION_MODEL, estimate_cost
 from pipeline.data.loader import load_entries
-from pipeline.schemas import ConditionArtifacts, Report, Theme
+from pipeline.schemas import ConditionArtifacts, Report, RunMetrics, Theme
 
 load_dotenv()
 
@@ -21,7 +22,7 @@ def _get_client() -> OpenAI:
 
 
 def run(csv_path: str, source: str) -> ConditionArtifacts:
-    start = time.time()
+    total_start = time.time()
 
     entries = load_entries(csv_path, source=source)
     entries = entries[:500]
@@ -48,8 +49,10 @@ Respond with a JSON object with exactly these keys:
 """
 
     client = _get_client()
+
+    llm_start = time.time()
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=GENERATION_MODEL,
         response_format={"type": "json_object"},
         messages=[
             {
@@ -59,8 +62,10 @@ Respond with a JSON object with exactly these keys:
             {"role": "user", "content": prompt}
         ]
     )
+    llm_secs = time.time() - llm_start
 
     data = json.loads(response.choices[0].message.content)
+    usage = response.usage
 
     report = Report(
         condition_name="LLM Only Baseline",
@@ -80,7 +85,25 @@ Respond with a JSON object with exactly these keys:
         limitations=data["limitations"],
     )
 
-    runtime = time.time() - start
+    total_secs = time.time() - total_start
+
+    metrics = RunMetrics(
+        total_seconds=round(total_secs, 2),
+        preprocessing_seconds=0.0,
+        llm_seconds=round(llm_secs, 2),
+        llm_calls=1,
+        input_tokens=usage.prompt_tokens,
+        output_tokens=usage.completion_tokens,
+        generation_model=GENERATION_MODEL,
+        embedding_tokens=0,
+        embedding_entries=0,
+        embedding_model="",
+        estimated_cost_usd=estimate_cost(
+            embedding_tokens=0,
+            input_tokens=usage.prompt_tokens,
+            output_tokens=usage.completion_tokens,
+        ),
+    )
 
     return ConditionArtifacts(
         condition="LLM Only Baseline",
@@ -90,5 +113,5 @@ Respond with a JSON object with exactly these keys:
         topics_or_clusters=[],
         lfe_per_entry=[],
         lfe_aggregated={},
-        runtime_seconds=runtime,
+        metrics=metrics,
     )

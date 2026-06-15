@@ -80,6 +80,23 @@ class Report(BaseModel):
     reflection_questions: list[str]
     limitations: list[str]
 
+class RunMetrics(BaseModel):
+    total_seconds: float = 0.0
+    preprocessing_seconds: float = 0.0
+    llm_seconds: float = 0.0
+
+    llm_calls: int = 0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    generation_model: str = ""
+
+    embedding_tokens: int = 0
+    embedding_entries: int = 0
+    embedding_model: str = ""
+
+    estimated_cost_usd: float = 0.0
+
+
 class ConditionArtifacts(BaseModel):
     condition: str
     corpus_id: str
@@ -88,6 +105,5 @@ class ConditionArtifacts(BaseModel):
     topics_or_clusters: list[dict]
     lfe_per_entry: list[LinguisticFeatures]
     lfe_aggregated: dict
-    token_usage: dict = {}
-    runtime_seconds: float = 0.0
+    metrics: RunMetrics = Field(default_factory=RunMetrics)
 

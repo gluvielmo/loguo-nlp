@@ -11,7 +11,7 @@ def generate(
         entries: list[JournalEntry],
         clusters: list[Cluster],
         lfe_list: list[LinguisticFeatures]
-) -> Report:
+) -> tuple[Report, int, int]:
     corpus_size = len(entries)
     date_range = (min(e.date for e in entries), max(e.date for e in entries))
     generated_at = datetime.utcnow()
@@ -83,7 +83,7 @@ def generate(
     )
 
     data = json.loads(response.choices[0].message.content)
-
+    usage = response.usage
 
     return Report(
         condition_name=condition_name,
@@ -98,4 +98,4 @@ def generate(
         surprising_patterns=data["surprising_patterns"],
         reflection_questions=data["reflection_questions"],
         limitations=data["limitations"],
-    )
+    ), usage.prompt_tokens, usage.completion_tokens
