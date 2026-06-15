@@ -9,9 +9,7 @@ from pipeline.schemas import JournalEntry, LinguisticFeatures
 
 spacy_model = spacy.load("en_core_web_sm")
 
-def _extract_from_doc(entry: JournalEntry) -> LinguisticFeatures:
-    doc = spacy_model(entry.text)
-
+def _extract_from_doc(entry: JournalEntry, doc) -> LinguisticFeatures:
     content_tokens = [token for token in doc if not token.is_space and not token.is_punct]
 
     # Document stats

@@ -5,7 +5,7 @@ from hdbscan import HDBSCAN
 
 from sklearn.feature_extraction.text import CountVectorizer
 
-from pipeline.schemas import JournalEntry, TopicAssignment
+from pipeline.schemas import Cluster, JournalEntry, TopicAssignment
 
 def build_models(n_docs: int) -> tuple[BERTopic, UMAP, HDBSCAN]:
     n_neighbors = min(10, n_docs // 3)
@@ -48,6 +48,9 @@ def run(entries: list[JournalEntry], embeddings: np.ndarray) -> list[TopicAssign
 
     topics, probs = topic_model.fit_transform(docs, embeddings)
 
+    topic_info = topic_model.get_topic_info()
+    topic_names = dict(zip(topic_info["Topic"], topic_info["Name"]))
+
     all_topic_assignments = []
 
     for i, (entry, topic_id, prob_row) in enumerate(zip(entries, topics, probs)):
@@ -58,10 +61,39 @@ def run(entries: list[JournalEntry], embeddings: np.ndarray) -> list[TopicAssign
             entry_id=entry.id,
             topic_id=topic_id,
             keywords=keywords,
-            topic_label=f"topic_{topic_id}",
+            topic_label=topic_names.get(topic_id, f"topic_{topic_id}"),
             probability=float(probs[i].max())
         )
 
         all_topic_assignments.append(topic_assignment)
 
     return all_topic_assignments
+
+def assignments_to_clusters(assignments: list[TopicAssignment]) -> list[Cluster]:
+    from collections import defaultdict
+    from pipeline.schemas import Cluster
+
+    groups = defaultdict(list)
+    for a in assignments:
+        groups[a.topic_id].append(a)
+
+    clusters = []
+    for topic_id, group in groups.items():
+        if topic_id == -1:
+            continue
+
+        entry_ids = [a.entry_id for a in group]
+        sorted_group = sorted(group, key=lambda a: a.probability, reverse=True)
+        representative_entry_ids = [a.entry_id for a in sorted_group[:3]]
+
+        cluster = Cluster(
+            cluster_id=topic_id,
+            entry_ids=entry_ids,
+            representative_entry_ids=representative_entry_ids,
+            label=group[0].topic_label,
+            keywords=group[0].keywords,
+            labeling_method="bertopic"
+        )
+        clusters.append(cluster)
+
+    return clusters
