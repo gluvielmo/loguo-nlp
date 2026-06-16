@@ -69,6 +69,28 @@ class Theme(BaseModel):
     description: str
     entry_ids: list[str]
 
+class BinProfile(BaseModel):
+    entry_count: int
+    mean_word_count: float
+    negation_rate: float
+    uncertainty_rate: float
+    first_person_ratio: float
+    direct_question_rate: float
+    deliberative_question_rate: float
+    past_tense_rate: float
+
+class TemporalAnalysis(BaseModel):
+    emerging_themes: list[str]
+    declining_themes: list[str]
+    persistent_themes: list[str]
+    cyclical_themes: list[str]
+    framing_shifts: list[str]
+    turning_points: list[str]
+    early_evidence: list[str]
+    late_evidence: list[str]
+    uncertainty_notes: list[str]
+    period_summaries: dict
+
 class Report(BaseModel):
     condition_name: str
     corpus_size: int
@@ -108,25 +130,3 @@ class ConditionArtifacts(BaseModel):
     lfe_per_entry: list[LinguisticFeatures]
     lfe_aggregated: dict
     metrics: RunMetrics = Field(default_factory=RunMetrics)
-
-class BinProfile(BaseModel):
-    entry_count: int
-    mean_word_count: float
-    negation_rate: float
-    uncertainty_rate: float
-    first_person_ratio: float
-    direct_question_rate: float
-    deliberative_question_rate: float
-    past_tense_rate: float
-
-class TemporalAnalysis(BaseModel):
-    emerging_themes: list[str]
-    declining_themes: list[str]
-    persistent_themes: list[str]
-    cyclical_themes: list[str]
-    framing_shifts: list[str]
-    turning_points: list[str]
-    early_evidence: list[str]
-    late_evidence: list[str]
-    uncertainty_notes: list[str]
-    period_summaries: dict

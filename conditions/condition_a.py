@@ -76,7 +76,7 @@ Respond with a JSON object with exactly these keys:
             for t in data["main_themes"]
         ],
         subthemes=[],
-        temporal_evolution=data["temporal_evolution"],
+        temporal_analysis=None,
         linguistic_patterns={},
         representative_evidence=[],
         surprising_patterns=data["surprising_patterns"],

@@ -1,0 +1,78 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-16T19:30:59.212024",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-16T19:30:59.211901",
+    "main_themes": [
+      {
+        "name": "Family Dynamics",
+        "description": "The journal entries frequently explore the relationships and interactions between immediate family members, particularly the dynamics of parenthood as new children are introduced into the family.",
+        "entry_ids": []
+      },
+      {
+        "name": "Health and Well-being",
+        "description": "Health-related themes are prevalent, from pregnancy and early motherhood stresses to physical health and mental health management, and the author's ongoing struggles with anxiety and depression.",
+        "entry_ids": []
+      },
+      {
+        "name": "Lifestyle and Daily Life",
+        "description": "Entries provide insights into everyday activities, home improvement projects, pets, and parenting routines that create a relatable day-to-day narrative.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Identity",
+        "description": "The author reflects on self-identity and personal growth through the lens of motherhood, career, and the joy and chaos that children bring to life.",
+        "entry_ids": []
+      },
+      {
+        "name": "Social Interaction and Community",
+        "description": "Engagement with community and social connections is a recurring topic, encompassing friendships and participation in social events, highlighting the importance of community support.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": null,
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "surprising_patterns": [
+      "The frequent mention of humor and lightheartedness in the face of parenting challenges, contrasting with the seriousness of mental health discussions.",
+      "The evolution from describing life primarily through the lens of pregnancy to the complexities of managing parenting routines with multiple children.",
+      "A significant focus on pets, particularly the dogs, as active participants in family life, reflecting their emotional importance alongside human family members."
+    ],
+    "reflection_questions": [
+      "How have my parenting experiences shaped my identity and perspective on life?",
+      "What lessons have I learned about balancing personal aspirations with family responsibilities?",
+      "In what ways can I actively foster my mental health while managing the demands of motherhood?",
+      "How do I perceive the evolving dynamics of family relationships as my children grow older?",
+      "What role do humor and creativity play in my approach to daily challenges and stressors?"
+    ],
+    "limitations": [
+      "The analysis is limited to a specific corpus of journal entries and may not represent the full spectrum of the author's experiences and context.",
+      "The subjective nature of journaling may skew the interpretation of emotional experiences and events, leading to potential biases in theme identification.",
+      "The focus on family and personal themes may overlook external factors or social issues that could also impact the author's reflections and experiences."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 11.73,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 11.33,
+    "llm_calls": 1,
+    "input_tokens": 41641,
+    "output_tokens": 630,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006624
+  }
+}

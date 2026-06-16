@@ -1,0 +1,78 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-16T19:50:57.737393",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-16T19:50:57.737298",
+    "main_themes": [
+      {
+        "name": "Parenthood and Motherhood",
+        "description": "The author chronicles the joys, challenges, and emotions associated with raising two children, capturing the nuances of motherhood, including the bonding moments and struggles.",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and Light-heartedness",
+        "description": "Throughout the entries, humor is a prevailing theme, especially in the context of parenting challenges, personal anecdotes, and daily life, presenting a light-hearted take on serious subjects.",
+        "entry_ids": []
+      },
+      {
+        "name": "Home and Family Dynamics",
+        "description": "The evolution of family life in a domestic setting, including home decoration, organization, interactions with pets, and relationships among family members, such as connections between siblings and pets.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Challenges",
+        "description": "Reflections on personal struggles, including postpartum depression, navigating social expectations, and self-awareness, showcasing a journey of emotional and mental growth.",
+        "entry_ids": []
+      },
+      {
+        "name": "Community and Social Connections",
+        "description": "Engagements with friends, community events, and family gatherings highlight the importance of social networks and support systems in the author's life.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": null,
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "surprising_patterns": [
+      "The journal reflects an increasing complexity in the author's relationships with her children, showing a deepening understanding of parenting.",
+      "Despite the prevalent humor, there is a consistent reflection on mental health, highlighting the author\u2019s efforts to maintain balance amidst chaos.",
+      "The author displays a continual evolution in home management and organization, correlating it with emotional states and family dynamics."
+    ],
+    "reflection_questions": [
+      "What were the most significant turning points in my journey as a mother, and how did they shape my identity?",
+      "In what ways has humor served as a coping mechanism during challenging times in my life?",
+      "How have the dynamics in my family evolved over time with the addition of new members?",
+      "What lessons have I learned about myself through the challenges of parenting?",
+      "How can I further nurture my relationships with my children and spouse in the coming years?"
+    ],
+    "limitations": [
+      "The analysis is based solely on a selection of journal entries, which may not represent all aspects of the author's experiences.",
+      "Entries may reflect a biased or selective memory, as they are influenced by the emotions and moods of those particular moments.",
+      "The reliance on personal narrative limits the analysis of external factors influencing the author's life, such as sociocultural changes or broader life events."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 11.75,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 11.38,
+    "llm_calls": 1,
+    "input_tokens": 41641,
+    "output_tokens": 700,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006666
+  }
+}
