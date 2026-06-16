@@ -1,0 +1,2255 @@
+{
+  "condition": "E: Hierarchical + LLM Labels",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-16T15:24:06.842447",
+  "report": {
+    "condition_name": "E: Hierarchical + LLM Labels",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-16T15:24:01.248139",
+    "main_themes": [
+      {
+        "name": "Chaos and Parenting Humor",
+        "description": "Across these entries, the author skillfully navigates the chaotic and often humorous realities of parenting. The experiences depicted showcase a blend of exhaustion, frustration, and the challenges of managing a household with young children, all conveyed through a comedic lens. The writer uses vivid metaphors and funny anecdotes to articulate the unpredictability of family life, highlighting both the trials and the joy that comes with it. This recognition of absurdity in daily struggles serves as a coping mechanism, indicating a resilient mindset amidst the hurdles of parenthood.",
+        "entry_ids": [
+          "dooce_0001",
+          "dooce_0002",
+          "dooce_0003",
+          "dooce_0004",
+          "dooce_0005",
+          "dooce_0006",
+          "dooce_0008",
+          "dooce_0009",
+          "dooce_0010",
+          "dooce_0011",
+          "dooce_0012",
+          "dooce_0013",
+          "dooce_0014",
+          "dooce_0015",
+          "dooce_0016",
+          "dooce_0017",
+          "dooce_0018",
+          "dooce_0019",
+          "dooce_0020",
+          "dooce_0021",
+          "dooce_0022",
+          "dooce_0023",
+          "dooce_0024",
+          "dooce_0025",
+          "dooce_0028",
+          "dooce_0029",
+          "dooce_0030",
+          "dooce_0031",
+          "dooce_0033",
+          "dooce_0034",
+          "dooce_0035",
+          "dooce_0036",
+          "dooce_0037",
+          "dooce_0038",
+          "dooce_0039",
+          "dooce_0040",
+          "dooce_0042",
+          "dooce_0043",
+          "dooce_0046",
+          "dooce_0047",
+          "dooce_0049",
+          "dooce_0052",
+          "dooce_0053",
+          "dooce_0055",
+          "dooce_0056",
+          "dooce_0058",
+          "dooce_0059",
+          "dooce_0060",
+          "dooce_0061",
+          "dooce_0062",
+          "dooce_0064",
+          "dooce_0066",
+          "dooce_0067",
+          "dooce_0068",
+          "dooce_0069",
+          "dooce_0070",
+          "dooce_0071",
+          "dooce_0073",
+          "dooce_0074",
+          "dooce_0075",
+          "dooce_0076",
+          "dooce_0077",
+          "dooce_0078",
+          "dooce_0079",
+          "dooce_0080",
+          "dooce_0081",
+          "dooce_0082",
+          "dooce_0083",
+          "dooce_0084",
+          "dooce_0085",
+          "dooce_0086",
+          "dooce_0087",
+          "dooce_0088",
+          "dooce_0090",
+          "dooce_0091",
+          "dooce_0092",
+          "dooce_0093",
+          "dooce_0096",
+          "dooce_0097",
+          "dooce_0098",
+          "dooce_0099",
+          "dooce_0100",
+          "dooce_0101",
+          "dooce_0102",
+          "dooce_0103",
+          "dooce_0104",
+          "dooce_0105",
+          "dooce_0106",
+          "dooce_0107",
+          "dooce_0108",
+          "dooce_0109",
+          "dooce_0110",
+          "dooce_0111",
+          "dooce_0112",
+          "dooce_0113",
+          "dooce_0115",
+          "dooce_0116",
+          "dooce_0117",
+          "dooce_0118",
+          "dooce_0120",
+          "dooce_0121",
+          "dooce_0122",
+          "dooce_0123",
+          "dooce_0124",
+          "dooce_0125",
+          "dooce_0126",
+          "dooce_0127",
+          "dooce_0128",
+          "dooce_0129",
+          "dooce_0130",
+          "dooce_0133",
+          "dooce_0134",
+          "dooce_0135",
+          "dooce_0136",
+          "dooce_0137",
+          "dooce_0138",
+          "dooce_0139",
+          "dooce_0140",
+          "dooce_0141",
+          "dooce_0142",
+          "dooce_0144",
+          "dooce_0145",
+          "dooce_0146",
+          "dooce_0147",
+          "dooce_0148",
+          "dooce_0150",
+          "dooce_0151",
+          "dooce_0152",
+          "dooce_0153",
+          "dooce_0154",
+          "dooce_0155",
+          "dooce_0156",
+          "dooce_0157",
+          "dooce_0158",
+          "dooce_0159",
+          "dooce_0161",
+          "dooce_0162",
+          "dooce_0164",
+          "dooce_0166",
+          "dooce_0167",
+          "dooce_0168",
+          "dooce_0169",
+          "dooce_0170",
+          "dooce_0171",
+          "dooce_0172",
+          "dooce_0173",
+          "dooce_0174",
+          "dooce_0175",
+          "dooce_0176",
+          "dooce_0177",
+          "dooce_0178",
+          "dooce_0180",
+          "dooce_0181",
+          "dooce_0182",
+          "dooce_0183",
+          "dooce_0184",
+          "dooce_0185",
+          "dooce_0187",
+          "dooce_0188",
+          "dooce_0189",
+          "dooce_0190",
+          "dooce_0191",
+          "dooce_0192",
+          "dooce_0193",
+          "dooce_0194",
+          "dooce_0195",
+          "dooce_0196",
+          "dooce_0199",
+          "dooce_0200",
+          "dooce_0201",
+          "dooce_0203",
+          "dooce_0204",
+          "dooce_0205",
+          "dooce_0206",
+          "dooce_0207",
+          "dooce_0208",
+          "dooce_0209",
+          "dooce_0210",
+          "dooce_0211",
+          "dooce_0212",
+          "dooce_0213",
+          "dooce_0214",
+          "dooce_0215",
+          "dooce_0216",
+          "dooce_0217",
+          "dooce_0218",
+          "dooce_0219",
+          "dooce_0220",
+          "dooce_0222",
+          "dooce_0223",
+          "dooce_0224",
+          "dooce_0225",
+          "dooce_0226",
+          "dooce_0227",
+          "dooce_0228",
+          "dooce_0229",
+          "dooce_0230",
+          "dooce_0231",
+          "dooce_0233",
+          "dooce_0234",
+          "dooce_0235",
+          "dooce_0236",
+          "dooce_0237",
+          "dooce_0238",
+          "dooce_0239",
+          "dooce_0240",
+          "dooce_0241",
+          "dooce_0242",
+          "dooce_0243",
+          "dooce_0244",
+          "dooce_0246",
+          "dooce_0247",
+          "dooce_0248",
+          "dooce_0249",
+          "dooce_0251",
+          "dooce_0252",
+          "dooce_0253",
+          "dooce_0254",
+          "dooce_0255",
+          "dooce_0256",
+          "dooce_0258",
+          "dooce_0260",
+          "dooce_0261",
+          "dooce_0262",
+          "dooce_0263",
+          "dooce_0264",
+          "dooce_0265",
+          "dooce_0267",
+          "dooce_0268",
+          "dooce_0269",
+          "dooce_0270",
+          "dooce_0271",
+          "dooce_0272",
+          "dooce_0274",
+          "dooce_0275",
+          "dooce_0276",
+          "dooce_0277",
+          "dooce_0278",
+          "dooce_0279",
+          "dooce_0280",
+          "dooce_0281",
+          "dooce_0282",
+          "dooce_0283",
+          "dooce_0284",
+          "dooce_0285",
+          "dooce_0288",
+          "dooce_0289",
+          "dooce_0290",
+          "dooce_0291",
+          "dooce_0292",
+          "dooce_0293",
+          "dooce_0294",
+          "dooce_0295",
+          "dooce_0296",
+          "dooce_0297",
+          "dooce_0298",
+          "dooce_0299",
+          "dooce_0300",
+          "dooce_0301",
+          "dooce_0302",
+          "dooce_0303",
+          "dooce_0305",
+          "dooce_0306",
+          "dooce_0307",
+          "dooce_0308",
+          "dooce_0309",
+          "dooce_0310",
+          "dooce_0312",
+          "dooce_0314",
+          "dooce_0315",
+          "dooce_0316",
+          "dooce_0318",
+          "dooce_0319",
+          "dooce_0320",
+          "dooce_0322",
+          "dooce_0323",
+          "dooce_0326",
+          "dooce_0327",
+          "dooce_0328",
+          "dooce_0329",
+          "dooce_0330",
+          "dooce_0331",
+          "dooce_0332",
+          "dooce_0333",
+          "dooce_0336",
+          "dooce_0337",
+          "dooce_0338",
+          "dooce_0339",
+          "dooce_0340",
+          "dooce_0341",
+          "dooce_0342",
+          "dooce_0343",
+          "dooce_0344",
+          "dooce_0345",
+          "dooce_0347",
+          "dooce_0348",
+          "dooce_0349",
+          "dooce_0350",
+          "dooce_0351",
+          "dooce_0352",
+          "dooce_0353",
+          "dooce_0354",
+          "dooce_0356",
+          "dooce_0357",
+          "dooce_0358",
+          "dooce_0359",
+          "dooce_0360",
+          "dooce_0361",
+          "dooce_0362",
+          "dooce_0363",
+          "dooce_0364",
+          "dooce_0365",
+          "dooce_0366",
+          "dooce_0367",
+          "dooce_0368",
+          "dooce_0369",
+          "dooce_0370",
+          "dooce_0371",
+          "dooce_0372",
+          "dooce_0373",
+          "dooce_0374",
+          "dooce_0375",
+          "dooce_0376",
+          "dooce_0377",
+          "dooce_0378",
+          "dooce_0379",
+          "dooce_0380",
+          "dooce_0381",
+          "dooce_0382",
+          "dooce_0383",
+          "dooce_0384",
+          "dooce_0385",
+          "dooce_0386",
+          "dooce_0387",
+          "dooce_0388",
+          "dooce_0390",
+          "dooce_0391",
+          "dooce_0392",
+          "dooce_0393",
+          "dooce_0396",
+          "dooce_0397",
+          "dooce_0398",
+          "dooce_0399",
+          "dooce_0400",
+          "dooce_0401",
+          "dooce_0402",
+          "dooce_0403",
+          "dooce_0404",
+          "dooce_0405",
+          "dooce_0406",
+          "dooce_0408",
+          "dooce_0409",
+          "dooce_0410",
+          "dooce_0411",
+          "dooce_0412",
+          "dooce_0413",
+          "dooce_0414",
+          "dooce_0415",
+          "dooce_0416",
+          "dooce_0417",
+          "dooce_0418",
+          "dooce_0419",
+          "dooce_0421",
+          "dooce_0422",
+          "dooce_0424",
+          "dooce_0425",
+          "dooce_0426",
+          "dooce_0427",
+          "dooce_0429",
+          "dooce_0430",
+          "dooce_0431",
+          "dooce_0432",
+          "dooce_0434",
+          "dooce_0435",
+          "dooce_0436",
+          "dooce_0437",
+          "dooce_0438",
+          "dooce_0441",
+          "dooce_0442",
+          "dooce_0444",
+          "dooce_0445",
+          "dooce_0446",
+          "dooce_0449",
+          "dooce_0450",
+          "dooce_0451",
+          "dooce_0452",
+          "dooce_0453",
+          "dooce_0454",
+          "dooce_0455",
+          "dooce_0456",
+          "dooce_0457",
+          "dooce_0458",
+          "dooce_0460",
+          "dooce_0462",
+          "dooce_0463",
+          "dooce_0464",
+          "dooce_0465",
+          "dooce_0466",
+          "dooce_0467",
+          "dooce_0468",
+          "dooce_0470",
+          "dooce_0471",
+          "dooce_0475",
+          "dooce_0476",
+          "dooce_0477",
+          "dooce_0478",
+          "dooce_0479",
+          "dooce_0481",
+          "dooce_0482",
+          "dooce_0483",
+          "dooce_0485",
+          "dooce_0486",
+          "dooce_0489",
+          "dooce_0492",
+          "dooce_0493",
+          "dooce_0494",
+          "dooce_0495",
+          "dooce_0496",
+          "dooce_0497",
+          "dooce_0498",
+          "dooce_0499",
+          "dooce_0500",
+          "dooce_0501",
+          "dooce_0502",
+          "dooce_0503",
+          "dooce_0504",
+          "dooce_0505",
+          "dooce_0506",
+          "dooce_0507",
+          "dooce_0508",
+          "dooce_0509",
+          "dooce_0510",
+          "dooce_0511",
+          "dooce_0512",
+          "dooce_0513",
+          "dooce_0514",
+          "dooce_0515",
+          "dooce_0518",
+          "dooce_0519",
+          "dooce_0520"
+        ]
+      },
+      {
+        "name": "Nostalgia and Family Life",
+        "description": "The entries reflect a longing for simpler times, as seen in the shift from beloved childhood shows to current parenting challenges and entertainment choices for children. There is a humorous and somewhat bewildered tone present in the way the author recounts moments from their life, highlighting the contrast between past experiences and present realities. The author seems to navigate the complexity of parenting with a blend of affection and critique, showcasing a desire to engage with their child's interests while simultaneously reminiscing about their own childhood favorites.",
+        "entry_ids": [
+          "dooce_0026",
+          "dooce_0325",
+          "dooce_0443"
+        ]
+      },
+      {
+        "name": "Childhood Innocence and Awkwardness",
+        "description": "The entries reflect a blend of childhood innocence and the inherent awkwardness that can arise from navigating certain taboo subjects. The first entry highlights the discomfort surrounding parental privacy and the risks of curiosity among young children. The second entry conveys a nostalgic yet uneasy recognition of adult behaviors that are often inappropriate for a child's understanding. The third entry captures the uninhibited and playful expression of a child's actions, contrasting with the heavier themes of adult experiences. Together, these entries illustrate the tension between innocence and the complexities of adult life as perceived through the lens of childhood experiences.",
+        "entry_ids": [
+          "dooce_0114",
+          "dooce_0198",
+          "dooce_0273"
+        ]
+      },
+      {
+        "name": "Frustration and Overwhelm",
+        "description": "The entries reveal a consistent theme of frustration intertwined with a sense of being overwhelmed by chaotic situations. Each entry reflects a moment where the author feels a loss of control due to the unpredictable behavior of others, leading to a heightened emotional state. The vivid descriptions of absurd scenarios\u2014like mistaking a woman for a sheep or having a peaceful morning interrupted by an unexpected event\u2014indicate a struggle to maintain a peaceful environment amidst chaos. There's a palpable tension between the desire for tranquility and the disruptive presence of others.",
+        "entry_ids": [
+          "dooce_0045",
+          "dooce_0245",
+          "dooce_0266",
+          "dooce_0394"
+        ]
+      },
+      {
+        "name": "Nostalgia and sensory comfort",
+        "description": "The entries reflect a deep emotional connection to sensory experiences, particularly through scent. The writer associates pleasant fragrances with memories of places and moments that evoke a sense of comfort, pleasure, and even escapism from daily stressors. This theme suggests that scents serve not just as mere enhancements to personal care routines, but also as significant emotional anchors that provide a sense of relief and nostalgia amidst life's challenges.",
+        "entry_ids": [
+          "dooce_0032",
+          "dooce_0072",
+          "dooce_0094",
+          "dooce_0163",
+          "dooce_0197",
+          "dooce_0469",
+          "dooce_0487"
+        ]
+      },
+      {
+        "name": "Appreciation for Beauty and Place",
+        "description": "The journal entries reflect a profound appreciation for the beauty and significance of both natural landscapes and built environments in the author's life. There is a suggestion of personal growth as the author expresses pride and satisfaction in their current living situation in Salt Lake City, highlighting the positive aspects of their surroundings. This appreciation extends to the architectural beauty of the Mormon temple, showcasing a willingness to engage with and recognize the artistry within a cultural context that may not fully resonate with the author's beliefs. Overall, the entries reveal a blend of personal acceptance, wonder, and a nuanced relationship with place and community.",
+        "entry_ids": [
+          "dooce_0048",
+          "dooce_0095",
+          "dooce_0160",
+          "dooce_0179",
+          "dooce_0186",
+          "dooce_0311",
+          "dooce_0313",
+          "dooce_0334",
+          "dooce_0335",
+          "dooce_0346",
+          "dooce_0428"
+        ]
+      },
+      {
+        "name": "Joy in Organization",
+        "description": "The entries reflect a sense of enjoyment and satisfaction derived from organization and tidiness, particularly in a shared, familial context. The writer finds humor and delight in both the use of the label maker and the playful interactions it inspires among family members, indicating a positive emotional experience linked to creating order. The emphasis on a small tool facilitating a larger organizational effort underscores a proactive and resourceful attitude, which contributes to their overall happiness and efficiency in managing their space.",
+        "entry_ids": [
+          "dooce_0051",
+          "dooce_0054"
+        ]
+      },
+      {
+        "name": "Nostalgia and Cultural Identity",
+        "description": "The entries reflect a deep engagement with personal and cultural history, revealing strong feelings of nostalgia and connection to past eras. The references to Basie's difficulty in a history class, the detailed chronicling of Elvis Presley's life, and the humorous acknowledgment of generational differences all suggest a longing for the past and a desire to understand and share cultural touchstones. This theme indicates an emotional resonance with earlier times, potentially serving as a means of forging identity and community through shared memories and interests.",
+        "entry_ids": [
+          "dooce_0044",
+          "dooce_0448",
+          "dooce_0484"
+        ]
+      },
+      {
+        "name": "Frustration and Disdain",
+        "description": "The journal entries reveal a strong sense of frustration and disdain toward a specific individual. The language used is pointed and suggestive, indicating feelings of contempt or a lack of respect for the person being discussed. The entries suggest that the author is grappling with the behavior or characteristics of this individual, implying a desire to critique or call out weaknesses. The tone appears sarcastic and confrontational, hinting at deeper emotional conflicts and unresolved feelings regarding this relationship or dynamic.",
+        "entry_ids": [
+          "dooce_0050",
+          "dooce_0132",
+          "dooce_0257",
+          "dooce_0480",
+          "dooce_0491"
+        ]
+      },
+      {
+        "name": "Compassion and gratitude",
+        "description": "The entries reflect a strong sense of compassion and gratitude towards both personal relationships and broader social responsibilities. The first entry emphasizes appreciation for family and love, highlighting an emotional connection and valuing safety and well-being. The second entry, in contrast, conveys a deep empathy for those affected by a natural disaster, illustrating an awareness of global events and a desire to contribute positively through support and action. Together, these entries underline the importance of community, both intimate and widespread, in shaping the writer's emotional landscape.",
+        "entry_ids": [
+          "dooce_0420",
+          "dooce_0473"
+        ]
+      },
+      {
+        "name": "Technology and Attraction",
+        "description": "The journal entries reveal a blend of feelings surrounding technology, personal interactions, and physical attraction. Each entry reflects an awareness of technological advancements and their implications in both a professional and personal context. There is a sense of nostalgia for simpler times contrasted with the current complexity of remote interactions. Emotional connections are also highlighted, particularly in Entry 2, where the admiration for Jon's physical appearance while engaging with technology illustrates how work and personal attraction intertwine. The theme suggests a complexity in navigating modern relationships within the tech-driven environment.",
+        "entry_ids": [
+          "dooce_0131",
+          "dooce_0407",
+          "dooce_0488"
+        ]
+      },
+      {
+        "name": "Emotional Manipulation and Control",
+        "description": "The entries suggest a recurring focus on the dynamics of power and emotional influence in personal relationships or life situations. The reference to 'The Godfather', a story defined by manipulation and control, indicates a recognition of the subtle yet profound ways emotions can be wielded to influence actions and perceptions. This highlights a complex interplay between vulnerability, strength, and the often unseen forces that shape interpersonal interactions.",
+        "entry_ids": [
+          "dooce_0472"
+        ]
+      },
+      {
+        "name": "Uncertainty and Anticipation",
+        "description": "The entries reflect a significant focus on the tension between anticipation and the unresolved nature of experiences. The author expresses a sense of waiting for a conclusion that is contingent upon external factors, highlighting feelings of impatience and the impact of delays on their narrative. This waiting period underscores a struggle with uncertainty, where the outcome heavily influences the storytelling process, leading to an emotional state that intertwines hope and frustration.",
+        "entry_ids": [
+          "dooce_0317"
+        ]
+      },
+      {
+        "name": "Grief over lost inspiration",
+        "description": "The journal entry highlights a deep emotional response to the closure of beloved magazines that served as sources of inspiration and joy. The writer expresses a sense of loss akin to mourning, reflecting on the impact these publications had on their life and aesthetic vision. The closing of each magazine not only signifies the loss of content but also the end of a cherished ritual that provided comfort, creativity, and a connection to a broader community. This emotional weight underscores the importance of such inspirations in their daily life and the void left in their absence.",
+        "entry_ids": [
+          "dooce_0065"
+        ]
+      },
+      {
+        "name": "Trust and skepticism",
+        "description": "The entries reveal a complex interplay between skepticism and the desire for connection, particularly in the context of trust. The initial reluctance to embrace a seemingly pointless saying underscores an internal dialogue that questions societal norms about trust, particularly concerning relationships with men. The mention of Clive Owen as a figure whom the writer would trust indicates a yearning for reliability and an acknowledgment of personal biases in judgment. This duality illustrates an ongoing struggle to balance skepticism with the potential for trust and intimacy in relationships.",
+        "entry_ids": [
+          "dooce_0395"
+        ]
+      },
+      {
+        "name": "Nostalgia and Identity",
+        "description": "The journal entries reveal a strong undercurrent of nostalgia, highlighting a longing for the past and a desire to connect with personal and cultural memories. Specifically, the mention of an album cover for 'greatest hits' and 'acoustic covers' suggests a creative exploration of familiar themes, indicating a process of self-reflection and identity formation through music. This tendency to reimagine classic elements resonates with the writer's emotional state, as they seek to integrate past experiences into their current self-concept.",
+        "entry_ids": [
+          "dooce_0221"
+        ]
+      },
+      {
+        "name": "Whimsy and Playfulness",
+        "description": "The entries suggest a strong sense of whimsy and playfulness, characterized by the writer's light-hearted observations and imaginative associations with ordinary experiences. The author demonstrates a fondness for anthropomorphism, attributing human traits and characteristics to animals, which enhances the humor and charm of their observations. This playful engagement reflects a desire to find joy in simple moments and highlights the writer's creative thought processes as they draw humorous parallels between animals and human behaviors or identities.",
+        "entry_ids": [
+          "dooce_0007",
+          "dooce_0041",
+          "dooce_0304",
+          "dooce_0440",
+          "dooce_0461",
+          "dooce_0516"
+        ]
+      },
+      {
+        "name": "Parental Influence and Identity",
+        "description": "The entries reflect a theme of parental influence and the complexities of identity in the context of motherhood. The author highlights their role in guiding or encouraging their child\u2019s actions, suggesting a sense of pride in their influence while also acknowledging their limitations in teaching. This duality indicates an exploration of maternal identity\u2014balancing recognition of one's contributions to a child\u2019s development with an awareness of the external factors, such as the Internet, that shape behavior and learning. The interplay of these elements suggests a reflective consideration of what it means to be a parent and the impact of technology on parenting dynamics.",
+        "entry_ids": [
+          "dooce_0027",
+          "dooce_0324"
+        ]
+      },
+      {
+        "name": "Parenting Journey and Growth",
+        "description": "The journal entries highlight the evolving experience of a parent witnessing their child's development, specifically in overcoming fears and milestones. The initial mention of Leta's swimming lessons reflects a common parenting concern about a child's reluctance to engage in new activities, suggesting an initial sense of anxiety or uncertainty. By the second entry, there is a clear development; Leta's progress denotes a triumph over fear, illustrating positive growth. The humor in the writer's absence during the final lesson indicates a light-hearted acceptance of parental limitations and the spontaneity of family life, further emphasizing the emotional journey of parenting.",
+        "entry_ids": [
+          "dooce_0057",
+          "dooce_0149"
+        ]
+      },
+      {
+        "name": "Humor in Daily Life",
+        "description": "The entries reflect a lighthearted approach to everyday challenges, showcasing the author's ability to find humor in mundane tasks and experiences. Whether it's figuring out a clever way to ensure pasta is cooked properly or using an unconventional item like string cheese to manage pets, the writer demonstrates an appreciation for the absurdity and joy found in simple moments. This whimsical perspective suggests a tendency to cope with life's routine demands through humor, fostering a sense of connection and playfulness in their environment.",
+        "entry_ids": [
+          "dooce_0089",
+          "dooce_0143"
+        ]
+      }
+    ],
+    "subthemes": [
+      {
+        "name": "Humor in parenting challenges",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Navigating sickness and health",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Managing expectations and chaos",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Sibling dynamics and interactions",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal reflections on self-care",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Childhood memories and traditions",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Parental involvement and media consumption",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor in parenting challenges",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Cultural commentary on entertainment",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Surreal experiences in modern life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Parental boundaries and privacy",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Curiosity versus innocence",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Awkward familial moments",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Childhood mischief",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Nostalgia for simpler times",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Interruptions of peace",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Absurdity in daily life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Loss of control",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Unexpected responsibilities",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Coping with disturbances",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Memory and attachment to places",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Psychological effects of scent",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Comfort in routine and rituals",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Emotional connections to personal care products",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and lightheartedness in daily life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal growth and acceptance",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Awe of natural landscapes",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Recognition of architectural beauty",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Cultural engagement and openness",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Contrast between past and present",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Playfulness in tasks",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Family bonding activities",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Resourcefulness and creativity",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Sense of achievement",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor in everyday life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Pop culture nostalgia",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Family influence on identity",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Generational disconnect",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal connections to historical figures",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor in cultural references",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Judgment of character",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Assertiveness and dominance",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Social critique",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Underlying insecurities",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Conflict in relationships",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Family appreciation",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Empathy for global issues",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Desire to help others",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Mindfulness of current events",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Strengthening social bonds",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Nostalgia for simpler times",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Admiration and attraction",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Remote work dynamics",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Professional versus personal life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Technological dependence",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Influence of family dynamics",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Resilience in the face of manipulation",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Perception versus reality in relationships",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Fear of authenticity and vulnerability",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Conflict between love and control",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Waiting for resolution",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Impact of external events",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Narrative control and closure",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Emotional investment in mundane tasks",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Coping with frustration",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Attachment to creative sources",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Nostalgia for past influences",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Fear of cultural loss",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Value of aesthetic experiences",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Connection to community through media",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Questioning societal norms",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal biases in trust",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Desire for connection",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor as coping mechanism",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Contradiction in beliefs",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Creative expression and artistry",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Longing for connection",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Music as a form of identity",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Reflection on past influences",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Anthropomorphism",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor in everyday life",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Imagination and creativity",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Connection with nature",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Joyful observations",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Influence of technology on parenting",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Pride in maternal role",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Limitations in parental guidance",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Recognition of external learning sources",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Exploration of identity as a mother",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Childhood milestones",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Overcoming fear",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Parental involvement",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor in parenting",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Parental anxiety",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Creativity in Problem Solving",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Lighthearted Parenting Techniques",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Joy in Domesticity",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Playfulness in Routine Tasks",
+        "description": "",
+        "entry_ids": []
+      },
+      {
+        "name": "Coping Mechanisms through Humor",
+        "description": "",
+        "entry_ids": []
+      }
+    ],
+    "temporal_analysis": null,
+    "linguistic_patterns": {},
+    "representative_evidence": [
+      {
+        "entry_id": "dooce_0511",
+        "cluster_label": "Chaos and Parenting Humor"
+      },
+      {
+        "entry_id": "dooce_0305",
+        "cluster_label": "Chaos and Parenting Humor"
+      },
+      {
+        "entry_id": "dooce_0178",
+        "cluster_label": "Chaos and Parenting Humor"
+      },
+      {
+        "entry_id": "dooce_0443",
+        "cluster_label": "Nostalgia and Family Life"
+      },
+      {
+        "entry_id": "dooce_0325",
+        "cluster_label": "Nostalgia and Family Life"
+      },
+      {
+        "entry_id": "dooce_0026",
+        "cluster_label": "Nostalgia and Family Life"
+      },
+      {
+        "entry_id": "dooce_0198",
+        "cluster_label": "Childhood Innocence and Awkwardness"
+      },
+      {
+        "entry_id": "dooce_0114",
+        "cluster_label": "Childhood Innocence and Awkwardness"
+      },
+      {
+        "entry_id": "dooce_0273",
+        "cluster_label": "Childhood Innocence and Awkwardness"
+      },
+      {
+        "entry_id": "dooce_0245",
+        "cluster_label": "Frustration and Overwhelm"
+      },
+      {
+        "entry_id": "dooce_0045",
+        "cluster_label": "Frustration and Overwhelm"
+      },
+      {
+        "entry_id": "dooce_0266",
+        "cluster_label": "Frustration and Overwhelm"
+      },
+      {
+        "entry_id": "dooce_0094",
+        "cluster_label": "Nostalgia and sensory comfort"
+      },
+      {
+        "entry_id": "dooce_0197",
+        "cluster_label": "Nostalgia and sensory comfort"
+      },
+      {
+        "entry_id": "dooce_0032",
+        "cluster_label": "Nostalgia and sensory comfort"
+      },
+      {
+        "entry_id": "dooce_0346",
+        "cluster_label": "Appreciation for Beauty and Place"
+      },
+      {
+        "entry_id": "dooce_0095",
+        "cluster_label": "Appreciation for Beauty and Place"
+      },
+      {
+        "entry_id": "dooce_0160",
+        "cluster_label": "Appreciation for Beauty and Place"
+      },
+      {
+        "entry_id": "dooce_0051",
+        "cluster_label": "Joy in Organization"
+      },
+      {
+        "entry_id": "dooce_0054",
+        "cluster_label": "Joy in Organization"
+      },
+      {
+        "entry_id": "dooce_0448",
+        "cluster_label": "Nostalgia and Cultural Identity"
+      },
+      {
+        "entry_id": "dooce_0044",
+        "cluster_label": "Nostalgia and Cultural Identity"
+      },
+      {
+        "entry_id": "dooce_0484",
+        "cluster_label": "Nostalgia and Cultural Identity"
+      },
+      {
+        "entry_id": "dooce_0050",
+        "cluster_label": "Frustration and Disdain"
+      },
+      {
+        "entry_id": "dooce_0132",
+        "cluster_label": "Frustration and Disdain"
+      },
+      {
+        "entry_id": "dooce_0257",
+        "cluster_label": "Frustration and Disdain"
+      },
+      {
+        "entry_id": "dooce_0420",
+        "cluster_label": "Compassion and gratitude"
+      },
+      {
+        "entry_id": "dooce_0473",
+        "cluster_label": "Compassion and gratitude"
+      },
+      {
+        "entry_id": "dooce_0488",
+        "cluster_label": "Technology and Attraction"
+      },
+      {
+        "entry_id": "dooce_0407",
+        "cluster_label": "Technology and Attraction"
+      },
+      {
+        "entry_id": "dooce_0131",
+        "cluster_label": "Technology and Attraction"
+      },
+      {
+        "entry_id": "dooce_0472",
+        "cluster_label": "Emotional Manipulation and Control"
+      },
+      {
+        "entry_id": "dooce_0317",
+        "cluster_label": "Uncertainty and Anticipation"
+      },
+      {
+        "entry_id": "dooce_0065",
+        "cluster_label": "Grief over lost inspiration"
+      },
+      {
+        "entry_id": "dooce_0395",
+        "cluster_label": "Trust and skepticism"
+      },
+      {
+        "entry_id": "dooce_0221",
+        "cluster_label": "Nostalgia and Identity"
+      },
+      {
+        "entry_id": "dooce_0007",
+        "cluster_label": "Whimsy and Playfulness"
+      },
+      {
+        "entry_id": "dooce_0440",
+        "cluster_label": "Whimsy and Playfulness"
+      },
+      {
+        "entry_id": "dooce_0304",
+        "cluster_label": "Whimsy and Playfulness"
+      },
+      {
+        "entry_id": "dooce_0027",
+        "cluster_label": "Parental Influence and Identity"
+      },
+      {
+        "entry_id": "dooce_0324",
+        "cluster_label": "Parental Influence and Identity"
+      },
+      {
+        "entry_id": "dooce_0057",
+        "cluster_label": "Parenting Journey and Growth"
+      },
+      {
+        "entry_id": "dooce_0149",
+        "cluster_label": "Parenting Journey and Growth"
+      },
+      {
+        "entry_id": "dooce_0089",
+        "cluster_label": "Humor in Daily Life"
+      },
+      {
+        "entry_id": "dooce_0143",
+        "cluster_label": "Humor in Daily Life"
+      }
+    ],
+    "surprising_patterns": [
+      "Despite the chaotic nature of parenting humor dominating the corpus, there were very few entries addressing deeper emotional struggles or psychological themes beyond surface-level observations.",
+      "Nostalgia appears in various forms, yet most entries reflect a longing for family life rather than personal experiences, indicating the author's primary engagement with collective rather than individual nostalgia.",
+      "Frustration and disdain appear in strikingly few entries considering the potentially overwhelming nature of parenting, suggesting either a coping mechanism at play or selective narration of experiences."
+    ],
+    "reflection_questions": [
+      "How do you balance humor with the more serious challenges you face in parenting?",
+      "In what ways do your nostalgic feelings influence how you perceive your current family life?",
+      "What specific moments of chaos have made you feel most connected to your child?",
+      "How do feelings of frustration inform your understanding of your parenting journey?",
+      "What role does beauty and sensory comfort play in your daily life and interactions?"
+    ],
+    "limitations": [
+      "The absence of linguistic feature extraction limits insights into emotional tone and linguistic complexity in the entries, which could provide deeper contextual understanding.",
+      "The small number of entries addressing themes related to deeper emotional struggles (e.g., grief, manipulation) may not adequately represent the author's overall emotional landscape.",
+      "The timeframe of the entries, spanning just over a year, may not capture long-term developmental or thematic shifts in the author's thoughts and experiences."
+    ]
+  },
+  "topics_or_clusters": [
+    {
+      "cluster_id": 0,
+      "label": "Chaos and Parenting Humor",
+      "description": "Across these entries, the author skillfully navigates the chaotic and often humorous realities of parenting. The experiences depicted showcase a blend of exhaustion, frustration, and the challenges of managing a household with young children, all conveyed through a comedic lens. The writer uses vivid metaphors and funny anecdotes to articulate the unpredictability of family life, highlighting both the trials and the joy that comes with it. This recognition of absurdity in daily struggles serves as a coping mechanism, indicating a resilient mindset amidst the hurdles of parenthood.",
+      "keywords": [],
+      "subthemes": [
+        "Humor in parenting challenges",
+        "Navigating sickness and health",
+        "Managing expectations and chaos",
+        "Sibling dynamics and interactions",
+        "Personal reflections on self-care"
+      ],
+      "entry_ids": [
+        "dooce_0001",
+        "dooce_0002",
+        "dooce_0003",
+        "dooce_0004",
+        "dooce_0005",
+        "dooce_0006",
+        "dooce_0008",
+        "dooce_0009",
+        "dooce_0010",
+        "dooce_0011",
+        "dooce_0012",
+        "dooce_0013",
+        "dooce_0014",
+        "dooce_0015",
+        "dooce_0016",
+        "dooce_0017",
+        "dooce_0018",
+        "dooce_0019",
+        "dooce_0020",
+        "dooce_0021",
+        "dooce_0022",
+        "dooce_0023",
+        "dooce_0024",
+        "dooce_0025",
+        "dooce_0028",
+        "dooce_0029",
+        "dooce_0030",
+        "dooce_0031",
+        "dooce_0033",
+        "dooce_0034",
+        "dooce_0035",
+        "dooce_0036",
+        "dooce_0037",
+        "dooce_0038",
+        "dooce_0039",
+        "dooce_0040",
+        "dooce_0042",
+        "dooce_0043",
+        "dooce_0046",
+        "dooce_0047",
+        "dooce_0049",
+        "dooce_0052",
+        "dooce_0053",
+        "dooce_0055",
+        "dooce_0056",
+        "dooce_0058",
+        "dooce_0059",
+        "dooce_0060",
+        "dooce_0061",
+        "dooce_0062",
+        "dooce_0064",
+        "dooce_0066",
+        "dooce_0067",
+        "dooce_0068",
+        "dooce_0069",
+        "dooce_0070",
+        "dooce_0071",
+        "dooce_0073",
+        "dooce_0074",
+        "dooce_0075",
+        "dooce_0076",
+        "dooce_0077",
+        "dooce_0078",
+        "dooce_0079",
+        "dooce_0080",
+        "dooce_0081",
+        "dooce_0082",
+        "dooce_0083",
+        "dooce_0084",
+        "dooce_0085",
+        "dooce_0086",
+        "dooce_0087",
+        "dooce_0088",
+        "dooce_0090",
+        "dooce_0091",
+        "dooce_0092",
+        "dooce_0093",
+        "dooce_0096",
+        "dooce_0097",
+        "dooce_0098",
+        "dooce_0099",
+        "dooce_0100",
+        "dooce_0101",
+        "dooce_0102",
+        "dooce_0103",
+        "dooce_0104",
+        "dooce_0105",
+        "dooce_0106",
+        "dooce_0107",
+        "dooce_0108",
+        "dooce_0109",
+        "dooce_0110",
+        "dooce_0111",
+        "dooce_0112",
+        "dooce_0113",
+        "dooce_0115",
+        "dooce_0116",
+        "dooce_0117",
+        "dooce_0118",
+        "dooce_0120",
+        "dooce_0121",
+        "dooce_0122",
+        "dooce_0123",
+        "dooce_0124",
+        "dooce_0125",
+        "dooce_0126",
+        "dooce_0127",
+        "dooce_0128",
+        "dooce_0129",
+        "dooce_0130",
+        "dooce_0133",
+        "dooce_0134",
+        "dooce_0135",
+        "dooce_0136",
+        "dooce_0137",
+        "dooce_0138",
+        "dooce_0139",
+        "dooce_0140",
+        "dooce_0141",
+        "dooce_0142",
+        "dooce_0144",
+        "dooce_0145",
+        "dooce_0146",
+        "dooce_0147",
+        "dooce_0148",
+        "dooce_0150",
+        "dooce_0151",
+        "dooce_0152",
+        "dooce_0153",
+        "dooce_0154",
+        "dooce_0155",
+        "dooce_0156",
+        "dooce_0157",
+        "dooce_0158",
+        "dooce_0159",
+        "dooce_0161",
+        "dooce_0162",
+        "dooce_0164",
+        "dooce_0166",
+        "dooce_0167",
+        "dooce_0168",
+        "dooce_0169",
+        "dooce_0170",
+        "dooce_0171",
+        "dooce_0172",
+        "dooce_0173",
+        "dooce_0174",
+        "dooce_0175",
+        "dooce_0176",
+        "dooce_0177",
+        "dooce_0178",
+        "dooce_0180",
+        "dooce_0181",
+        "dooce_0182",
+        "dooce_0183",
+        "dooce_0184",
+        "dooce_0185",
+        "dooce_0187",
+        "dooce_0188",
+        "dooce_0189",
+        "dooce_0190",
+        "dooce_0191",
+        "dooce_0192",
+        "dooce_0193",
+        "dooce_0194",
+        "dooce_0195",
+        "dooce_0196",
+        "dooce_0199",
+        "dooce_0200",
+        "dooce_0201",
+        "dooce_0203",
+        "dooce_0204",
+        "dooce_0205",
+        "dooce_0206",
+        "dooce_0207",
+        "dooce_0208",
+        "dooce_0209",
+        "dooce_0210",
+        "dooce_0211",
+        "dooce_0212",
+        "dooce_0213",
+        "dooce_0214",
+        "dooce_0215",
+        "dooce_0216",
+        "dooce_0217",
+        "dooce_0218",
+        "dooce_0219",
+        "dooce_0220",
+        "dooce_0222",
+        "dooce_0223",
+        "dooce_0224",
+        "dooce_0225",
+        "dooce_0226",
+        "dooce_0227",
+        "dooce_0228",
+        "dooce_0229",
+        "dooce_0230",
+        "dooce_0231",
+        "dooce_0233",
+        "dooce_0234",
+        "dooce_0235",
+        "dooce_0236",
+        "dooce_0237",
+        "dooce_0238",
+        "dooce_0239",
+        "dooce_0240",
+        "dooce_0241",
+        "dooce_0242",
+        "dooce_0243",
+        "dooce_0244",
+        "dooce_0246",
+        "dooce_0247",
+        "dooce_0248",
+        "dooce_0249",
+        "dooce_0251",
+        "dooce_0252",
+        "dooce_0253",
+        "dooce_0254",
+        "dooce_0255",
+        "dooce_0256",
+        "dooce_0258",
+        "dooce_0260",
+        "dooce_0261",
+        "dooce_0262",
+        "dooce_0263",
+        "dooce_0264",
+        "dooce_0265",
+        "dooce_0267",
+        "dooce_0268",
+        "dooce_0269",
+        "dooce_0270",
+        "dooce_0271",
+        "dooce_0272",
+        "dooce_0274",
+        "dooce_0275",
+        "dooce_0276",
+        "dooce_0277",
+        "dooce_0278",
+        "dooce_0279",
+        "dooce_0280",
+        "dooce_0281",
+        "dooce_0282",
+        "dooce_0283",
+        "dooce_0284",
+        "dooce_0285",
+        "dooce_0288",
+        "dooce_0289",
+        "dooce_0290",
+        "dooce_0291",
+        "dooce_0292",
+        "dooce_0293",
+        "dooce_0294",
+        "dooce_0295",
+        "dooce_0296",
+        "dooce_0297",
+        "dooce_0298",
+        "dooce_0299",
+        "dooce_0300",
+        "dooce_0301",
+        "dooce_0302",
+        "dooce_0303",
+        "dooce_0305",
+        "dooce_0306",
+        "dooce_0307",
+        "dooce_0308",
+        "dooce_0309",
+        "dooce_0310",
+        "dooce_0312",
+        "dooce_0314",
+        "dooce_0315",
+        "dooce_0316",
+        "dooce_0318",
+        "dooce_0319",
+        "dooce_0320",
+        "dooce_0322",
+        "dooce_0323",
+        "dooce_0326",
+        "dooce_0327",
+        "dooce_0328",
+        "dooce_0329",
+        "dooce_0330",
+        "dooce_0331",
+        "dooce_0332",
+        "dooce_0333",
+        "dooce_0336",
+        "dooce_0337",
+        "dooce_0338",
+        "dooce_0339",
+        "dooce_0340",
+        "dooce_0341",
+        "dooce_0342",
+        "dooce_0343",
+        "dooce_0344",
+        "dooce_0345",
+        "dooce_0347",
+        "dooce_0348",
+        "dooce_0349",
+        "dooce_0350",
+        "dooce_0351",
+        "dooce_0352",
+        "dooce_0353",
+        "dooce_0354",
+        "dooce_0356",
+        "dooce_0357",
+        "dooce_0358",
+        "dooce_0359",
+        "dooce_0360",
+        "dooce_0361",
+        "dooce_0362",
+        "dooce_0363",
+        "dooce_0364",
+        "dooce_0365",
+        "dooce_0366",
+        "dooce_0367",
+        "dooce_0368",
+        "dooce_0369",
+        "dooce_0370",
+        "dooce_0371",
+        "dooce_0372",
+        "dooce_0373",
+        "dooce_0374",
+        "dooce_0375",
+        "dooce_0376",
+        "dooce_0377",
+        "dooce_0378",
+        "dooce_0379",
+        "dooce_0380",
+        "dooce_0381",
+        "dooce_0382",
+        "dooce_0383",
+        "dooce_0384",
+        "dooce_0385",
+        "dooce_0386",
+        "dooce_0387",
+        "dooce_0388",
+        "dooce_0390",
+        "dooce_0391",
+        "dooce_0392",
+        "dooce_0393",
+        "dooce_0396",
+        "dooce_0397",
+        "dooce_0398",
+        "dooce_0399",
+        "dooce_0400",
+        "dooce_0401",
+        "dooce_0402",
+        "dooce_0403",
+        "dooce_0404",
+        "dooce_0405",
+        "dooce_0406",
+        "dooce_0408",
+        "dooce_0409",
+        "dooce_0410",
+        "dooce_0411",
+        "dooce_0412",
+        "dooce_0413",
+        "dooce_0414",
+        "dooce_0415",
+        "dooce_0416",
+        "dooce_0417",
+        "dooce_0418",
+        "dooce_0419",
+        "dooce_0421",
+        "dooce_0422",
+        "dooce_0424",
+        "dooce_0425",
+        "dooce_0426",
+        "dooce_0427",
+        "dooce_0429",
+        "dooce_0430",
+        "dooce_0431",
+        "dooce_0432",
+        "dooce_0434",
+        "dooce_0435",
+        "dooce_0436",
+        "dooce_0437",
+        "dooce_0438",
+        "dooce_0441",
+        "dooce_0442",
+        "dooce_0444",
+        "dooce_0445",
+        "dooce_0446",
+        "dooce_0449",
+        "dooce_0450",
+        "dooce_0451",
+        "dooce_0452",
+        "dooce_0453",
+        "dooce_0454",
+        "dooce_0455",
+        "dooce_0456",
+        "dooce_0457",
+        "dooce_0458",
+        "dooce_0460",
+        "dooce_0462",
+        "dooce_0463",
+        "dooce_0464",
+        "dooce_0465",
+        "dooce_0466",
+        "dooce_0467",
+        "dooce_0468",
+        "dooce_0470",
+        "dooce_0471",
+        "dooce_0475",
+        "dooce_0476",
+        "dooce_0477",
+        "dooce_0478",
+        "dooce_0479",
+        "dooce_0481",
+        "dooce_0482",
+        "dooce_0483",
+        "dooce_0485",
+        "dooce_0486",
+        "dooce_0489",
+        "dooce_0492",
+        "dooce_0493",
+        "dooce_0494",
+        "dooce_0495",
+        "dooce_0496",
+        "dooce_0497",
+        "dooce_0498",
+        "dooce_0499",
+        "dooce_0500",
+        "dooce_0501",
+        "dooce_0502",
+        "dooce_0503",
+        "dooce_0504",
+        "dooce_0505",
+        "dooce_0506",
+        "dooce_0507",
+        "dooce_0508",
+        "dooce_0509",
+        "dooce_0510",
+        "dooce_0511",
+        "dooce_0512",
+        "dooce_0513",
+        "dooce_0514",
+        "dooce_0515",
+        "dooce_0518",
+        "dooce_0519",
+        "dooce_0520"
+      ],
+      "representative_entry_ids": [
+        "dooce_0511",
+        "dooce_0305",
+        "dooce_0178"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 1,
+      "label": "Nostalgia and Family Life",
+      "description": "The entries reflect a longing for simpler times, as seen in the shift from beloved childhood shows to current parenting challenges and entertainment choices for children. There is a humorous and somewhat bewildered tone present in the way the author recounts moments from their life, highlighting the contrast between past experiences and present realities. The author seems to navigate the complexity of parenting with a blend of affection and critique, showcasing a desire to engage with their child's interests while simultaneously reminiscing about their own childhood favorites.",
+      "keywords": [],
+      "subthemes": [
+        "Childhood memories and traditions",
+        "Parental involvement and media consumption",
+        "Humor in parenting challenges",
+        "Cultural commentary on entertainment",
+        "Surreal experiences in modern life"
+      ],
+      "entry_ids": [
+        "dooce_0026",
+        "dooce_0325",
+        "dooce_0443"
+      ],
+      "representative_entry_ids": [
+        "dooce_0443",
+        "dooce_0325",
+        "dooce_0026"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 2,
+      "label": "Childhood Innocence and Awkwardness",
+      "description": "The entries reflect a blend of childhood innocence and the inherent awkwardness that can arise from navigating certain taboo subjects. The first entry highlights the discomfort surrounding parental privacy and the risks of curiosity among young children. The second entry conveys a nostalgic yet uneasy recognition of adult behaviors that are often inappropriate for a child's understanding. The third entry captures the uninhibited and playful expression of a child's actions, contrasting with the heavier themes of adult experiences. Together, these entries illustrate the tension between innocence and the complexities of adult life as perceived through the lens of childhood experiences.",
+      "keywords": [],
+      "subthemes": [
+        "Parental boundaries and privacy",
+        "Curiosity versus innocence",
+        "Awkward familial moments",
+        "Childhood mischief",
+        "Nostalgia for simpler times"
+      ],
+      "entry_ids": [
+        "dooce_0114",
+        "dooce_0198",
+        "dooce_0273"
+      ],
+      "representative_entry_ids": [
+        "dooce_0198",
+        "dooce_0114",
+        "dooce_0273"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 3,
+      "label": "Frustration and Overwhelm",
+      "description": "The entries reveal a consistent theme of frustration intertwined with a sense of being overwhelmed by chaotic situations. Each entry reflects a moment where the author feels a loss of control due to the unpredictable behavior of others, leading to a heightened emotional state. The vivid descriptions of absurd scenarios\u2014like mistaking a woman for a sheep or having a peaceful morning interrupted by an unexpected event\u2014indicate a struggle to maintain a peaceful environment amidst chaos. There's a palpable tension between the desire for tranquility and the disruptive presence of others.",
+      "keywords": [],
+      "subthemes": [
+        "Interruptions of peace",
+        "Absurdity in daily life",
+        "Loss of control",
+        "Unexpected responsibilities",
+        "Coping with disturbances"
+      ],
+      "entry_ids": [
+        "dooce_0045",
+        "dooce_0245",
+        "dooce_0266",
+        "dooce_0394"
+      ],
+      "representative_entry_ids": [
+        "dooce_0245",
+        "dooce_0045",
+        "dooce_0266"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 4,
+      "label": "Nostalgia and sensory comfort",
+      "description": "The entries reflect a deep emotional connection to sensory experiences, particularly through scent. The writer associates pleasant fragrances with memories of places and moments that evoke a sense of comfort, pleasure, and even escapism from daily stressors. This theme suggests that scents serve not just as mere enhancements to personal care routines, but also as significant emotional anchors that provide a sense of relief and nostalgia amidst life's challenges.",
+      "keywords": [],
+      "subthemes": [
+        "Memory and attachment to places",
+        "Psychological effects of scent",
+        "Comfort in routine and rituals",
+        "Emotional connections to personal care products",
+        "Humor and lightheartedness in daily life"
+      ],
+      "entry_ids": [
+        "dooce_0032",
+        "dooce_0072",
+        "dooce_0094",
+        "dooce_0163",
+        "dooce_0197",
+        "dooce_0469",
+        "dooce_0487"
+      ],
+      "representative_entry_ids": [
+        "dooce_0094",
+        "dooce_0197",
+        "dooce_0032"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 5,
+      "label": "Appreciation for Beauty and Place",
+      "description": "The journal entries reflect a profound appreciation for the beauty and significance of both natural landscapes and built environments in the author's life. There is a suggestion of personal growth as the author expresses pride and satisfaction in their current living situation in Salt Lake City, highlighting the positive aspects of their surroundings. This appreciation extends to the architectural beauty of the Mormon temple, showcasing a willingness to engage with and recognize the artistry within a cultural context that may not fully resonate with the author's beliefs. Overall, the entries reveal a blend of personal acceptance, wonder, and a nuanced relationship with place and community.",
+      "keywords": [],
+      "subthemes": [
+        "Personal growth and acceptance",
+        "Awe of natural landscapes",
+        "Recognition of architectural beauty",
+        "Cultural engagement and openness",
+        "Contrast between past and present"
+      ],
+      "entry_ids": [
+        "dooce_0048",
+        "dooce_0095",
+        "dooce_0160",
+        "dooce_0179",
+        "dooce_0186",
+        "dooce_0311",
+        "dooce_0313",
+        "dooce_0334",
+        "dooce_0335",
+        "dooce_0346",
+        "dooce_0428"
+      ],
+      "representative_entry_ids": [
+        "dooce_0346",
+        "dooce_0095",
+        "dooce_0160"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 6,
+      "label": "Joy in Organization",
+      "description": "The entries reflect a sense of enjoyment and satisfaction derived from organization and tidiness, particularly in a shared, familial context. The writer finds humor and delight in both the use of the label maker and the playful interactions it inspires among family members, indicating a positive emotional experience linked to creating order. The emphasis on a small tool facilitating a larger organizational effort underscores a proactive and resourceful attitude, which contributes to their overall happiness and efficiency in managing their space.",
+      "keywords": [],
+      "subthemes": [
+        "Playfulness in tasks",
+        "Family bonding activities",
+        "Resourcefulness and creativity",
+        "Sense of achievement",
+        "Humor in everyday life"
+      ],
+      "entry_ids": [
+        "dooce_0051",
+        "dooce_0054"
+      ],
+      "representative_entry_ids": [
+        "dooce_0051",
+        "dooce_0054"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 7,
+      "label": "Nostalgia and Cultural Identity",
+      "description": "The entries reflect a deep engagement with personal and cultural history, revealing strong feelings of nostalgia and connection to past eras. The references to Basie's difficulty in a history class, the detailed chronicling of Elvis Presley's life, and the humorous acknowledgment of generational differences all suggest a longing for the past and a desire to understand and share cultural touchstones. This theme indicates an emotional resonance with earlier times, potentially serving as a means of forging identity and community through shared memories and interests.",
+      "keywords": [],
+      "subthemes": [
+        "Pop culture nostalgia",
+        "Family influence on identity",
+        "Generational disconnect",
+        "Personal connections to historical figures",
+        "Humor in cultural references"
+      ],
+      "entry_ids": [
+        "dooce_0044",
+        "dooce_0448",
+        "dooce_0484"
+      ],
+      "representative_entry_ids": [
+        "dooce_0448",
+        "dooce_0044",
+        "dooce_0484"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 8,
+      "label": "Frustration and Disdain",
+      "description": "The journal entries reveal a strong sense of frustration and disdain toward a specific individual. The language used is pointed and suggestive, indicating feelings of contempt or a lack of respect for the person being discussed. The entries suggest that the author is grappling with the behavior or characteristics of this individual, implying a desire to critique or call out weaknesses. The tone appears sarcastic and confrontational, hinting at deeper emotional conflicts and unresolved feelings regarding this relationship or dynamic.",
+      "keywords": [],
+      "subthemes": [
+        "Judgment of character",
+        "Assertiveness and dominance",
+        "Social critique",
+        "Underlying insecurities",
+        "Conflict in relationships"
+      ],
+      "entry_ids": [
+        "dooce_0050",
+        "dooce_0132",
+        "dooce_0257",
+        "dooce_0480",
+        "dooce_0491"
+      ],
+      "representative_entry_ids": [
+        "dooce_0050",
+        "dooce_0132",
+        "dooce_0257"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 9,
+      "label": "Compassion and gratitude",
+      "description": "The entries reflect a strong sense of compassion and gratitude towards both personal relationships and broader social responsibilities. The first entry emphasizes appreciation for family and love, highlighting an emotional connection and valuing safety and well-being. The second entry, in contrast, conveys a deep empathy for those affected by a natural disaster, illustrating an awareness of global events and a desire to contribute positively through support and action. Together, these entries underline the importance of community, both intimate and widespread, in shaping the writer's emotional landscape.",
+      "keywords": [],
+      "subthemes": [
+        "Family appreciation",
+        "Empathy for global issues",
+        "Desire to help others",
+        "Mindfulness of current events",
+        "Strengthening social bonds"
+      ],
+      "entry_ids": [
+        "dooce_0420",
+        "dooce_0473"
+      ],
+      "representative_entry_ids": [
+        "dooce_0420",
+        "dooce_0473"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 10,
+      "label": "Technology and Attraction",
+      "description": "The journal entries reveal a blend of feelings surrounding technology, personal interactions, and physical attraction. Each entry reflects an awareness of technological advancements and their implications in both a professional and personal context. There is a sense of nostalgia for simpler times contrasted with the current complexity of remote interactions. Emotional connections are also highlighted, particularly in Entry 2, where the admiration for Jon's physical appearance while engaging with technology illustrates how work and personal attraction intertwine. The theme suggests a complexity in navigating modern relationships within the tech-driven environment.",
+      "keywords": [],
+      "subthemes": [
+        "Nostalgia for simpler times",
+        "Admiration and attraction",
+        "Remote work dynamics",
+        "Professional versus personal life",
+        "Technological dependence"
+      ],
+      "entry_ids": [
+        "dooce_0131",
+        "dooce_0407",
+        "dooce_0488"
+      ],
+      "representative_entry_ids": [
+        "dooce_0488",
+        "dooce_0407",
+        "dooce_0131"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 11,
+      "label": "Emotional Manipulation and Control",
+      "description": "The entries suggest a recurring focus on the dynamics of power and emotional influence in personal relationships or life situations. The reference to 'The Godfather', a story defined by manipulation and control, indicates a recognition of the subtle yet profound ways emotions can be wielded to influence actions and perceptions. This highlights a complex interplay between vulnerability, strength, and the often unseen forces that shape interpersonal interactions.",
+      "keywords": [],
+      "subthemes": [
+        "Influence of family dynamics",
+        "Resilience in the face of manipulation",
+        "Perception versus reality in relationships",
+        "Fear of authenticity and vulnerability",
+        "Conflict between love and control"
+      ],
+      "entry_ids": [
+        "dooce_0472"
+      ],
+      "representative_entry_ids": [
+        "dooce_0472"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 12,
+      "label": "Uncertainty and Anticipation",
+      "description": "The entries reflect a significant focus on the tension between anticipation and the unresolved nature of experiences. The author expresses a sense of waiting for a conclusion that is contingent upon external factors, highlighting feelings of impatience and the impact of delays on their narrative. This waiting period underscores a struggle with uncertainty, where the outcome heavily influences the storytelling process, leading to an emotional state that intertwines hope and frustration.",
+      "keywords": [],
+      "subthemes": [
+        "Waiting for resolution",
+        "Impact of external events",
+        "Narrative control and closure",
+        "Emotional investment in mundane tasks",
+        "Coping with frustration"
+      ],
+      "entry_ids": [
+        "dooce_0317"
+      ],
+      "representative_entry_ids": [
+        "dooce_0317"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 13,
+      "label": "Grief over lost inspiration",
+      "description": "The journal entry highlights a deep emotional response to the closure of beloved magazines that served as sources of inspiration and joy. The writer expresses a sense of loss akin to mourning, reflecting on the impact these publications had on their life and aesthetic vision. The closing of each magazine not only signifies the loss of content but also the end of a cherished ritual that provided comfort, creativity, and a connection to a broader community. This emotional weight underscores the importance of such inspirations in their daily life and the void left in their absence.",
+      "keywords": [],
+      "subthemes": [
+        "Attachment to creative sources",
+        "Nostalgia for past influences",
+        "Fear of cultural loss",
+        "Value of aesthetic experiences",
+        "Connection to community through media"
+      ],
+      "entry_ids": [
+        "dooce_0065"
+      ],
+      "representative_entry_ids": [
+        "dooce_0065"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 14,
+      "label": "Trust and skepticism",
+      "description": "The entries reveal a complex interplay between skepticism and the desire for connection, particularly in the context of trust. The initial reluctance to embrace a seemingly pointless saying underscores an internal dialogue that questions societal norms about trust, particularly concerning relationships with men. The mention of Clive Owen as a figure whom the writer would trust indicates a yearning for reliability and an acknowledgment of personal biases in judgment. This duality illustrates an ongoing struggle to balance skepticism with the potential for trust and intimacy in relationships.",
+      "keywords": [],
+      "subthemes": [
+        "Questioning societal norms",
+        "Personal biases in trust",
+        "Desire for connection",
+        "Humor as coping mechanism",
+        "Contradiction in beliefs"
+      ],
+      "entry_ids": [
+        "dooce_0395"
+      ],
+      "representative_entry_ids": [
+        "dooce_0395"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 15,
+      "label": "Nostalgia and Identity",
+      "description": "The journal entries reveal a strong undercurrent of nostalgia, highlighting a longing for the past and a desire to connect with personal and cultural memories. Specifically, the mention of an album cover for 'greatest hits' and 'acoustic covers' suggests a creative exploration of familiar themes, indicating a process of self-reflection and identity formation through music. This tendency to reimagine classic elements resonates with the writer's emotional state, as they seek to integrate past experiences into their current self-concept.",
+      "keywords": [],
+      "subthemes": [
+        "Creative expression and artistry",
+        "Longing for connection",
+        "Music as a form of identity",
+        "Reflection on past influences"
+      ],
+      "entry_ids": [
+        "dooce_0221"
+      ],
+      "representative_entry_ids": [
+        "dooce_0221"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 16,
+      "label": "Whimsy and Playfulness",
+      "description": "The entries suggest a strong sense of whimsy and playfulness, characterized by the writer's light-hearted observations and imaginative associations with ordinary experiences. The author demonstrates a fondness for anthropomorphism, attributing human traits and characteristics to animals, which enhances the humor and charm of their observations. This playful engagement reflects a desire to find joy in simple moments and highlights the writer's creative thought processes as they draw humorous parallels between animals and human behaviors or identities.",
+      "keywords": [],
+      "subthemes": [
+        "Anthropomorphism",
+        "Humor in everyday life",
+        "Imagination and creativity",
+        "Connection with nature",
+        "Joyful observations"
+      ],
+      "entry_ids": [
+        "dooce_0007",
+        "dooce_0041",
+        "dooce_0304",
+        "dooce_0440",
+        "dooce_0461",
+        "dooce_0516"
+      ],
+      "representative_entry_ids": [
+        "dooce_0007",
+        "dooce_0440",
+        "dooce_0304"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 17,
+      "label": "Parental Influence and Identity",
+      "description": "The entries reflect a theme of parental influence and the complexities of identity in the context of motherhood. The author highlights their role in guiding or encouraging their child\u2019s actions, suggesting a sense of pride in their influence while also acknowledging their limitations in teaching. This duality indicates an exploration of maternal identity\u2014balancing recognition of one's contributions to a child\u2019s development with an awareness of the external factors, such as the Internet, that shape behavior and learning. The interplay of these elements suggests a reflective consideration of what it means to be a parent and the impact of technology on parenting dynamics.",
+      "keywords": [],
+      "subthemes": [
+        "Influence of technology on parenting",
+        "Pride in maternal role",
+        "Limitations in parental guidance",
+        "Recognition of external learning sources",
+        "Exploration of identity as a mother"
+      ],
+      "entry_ids": [
+        "dooce_0027",
+        "dooce_0324"
+      ],
+      "representative_entry_ids": [
+        "dooce_0027",
+        "dooce_0324"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 18,
+      "label": "Parenting Journey and Growth",
+      "description": "The journal entries highlight the evolving experience of a parent witnessing their child's development, specifically in overcoming fears and milestones. The initial mention of Leta's swimming lessons reflects a common parenting concern about a child's reluctance to engage in new activities, suggesting an initial sense of anxiety or uncertainty. By the second entry, there is a clear development; Leta's progress denotes a triumph over fear, illustrating positive growth. The humor in the writer's absence during the final lesson indicates a light-hearted acceptance of parental limitations and the spontaneity of family life, further emphasizing the emotional journey of parenting.",
+      "keywords": [],
+      "subthemes": [
+        "Childhood milestones",
+        "Overcoming fear",
+        "Parental involvement",
+        "Humor in parenting",
+        "Parental anxiety"
+      ],
+      "entry_ids": [
+        "dooce_0057",
+        "dooce_0149"
+      ],
+      "representative_entry_ids": [
+        "dooce_0057",
+        "dooce_0149"
+      ],
+      "labeling_method": "llm"
+    },
+    {
+      "cluster_id": 19,
+      "label": "Humor in Daily Life",
+      "description": "The entries reflect a lighthearted approach to everyday challenges, showcasing the author's ability to find humor in mundane tasks and experiences. Whether it's figuring out a clever way to ensure pasta is cooked properly or using an unconventional item like string cheese to manage pets, the writer demonstrates an appreciation for the absurdity and joy found in simple moments. This whimsical perspective suggests a tendency to cope with life's routine demands through humor, fostering a sense of connection and playfulness in their environment.",
+      "keywords": [],
+      "subthemes": [
+        "Creativity in Problem Solving",
+        "Lighthearted Parenting Techniques",
+        "Joy in Domesticity",
+        "Playfulness in Routine Tasks",
+        "Coping Mechanisms through Humor"
+      ],
+      "entry_ids": [
+        "dooce_0089",
+        "dooce_0143"
+      ],
+      "representative_entry_ids": [
+        "dooce_0089",
+        "dooce_0143"
+      ],
+      "labeling_method": "llm"
+    }
+  ],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 62.38,
+    "preprocessing_seconds": 0.14,
+    "llm_seconds": 61.89,
+    "llm_calls": 21,
+    "input_tokens": 8591,
+    "output_tokens": 3620,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 500,
+    "embedding_model": "text-embedding-3-small",
+    "estimated_cost_usd": 0.003461
+  }
+}

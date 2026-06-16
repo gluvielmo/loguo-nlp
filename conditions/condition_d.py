@@ -18,30 +18,25 @@ def run(csv_path: str, source: str) -> ConditionArtifacts:
     entries = load_entries(csv_path, source)
     entries = entries[:500]
 
-    # embed — tokens=0 means cache hit (no API call)
     t0 = time.time()
     vecs, embed_tokens = embed(entries, cache_dir=Path("outputs/embeddings_cache"))
     embed_secs = time.time() - t0
 
-    # BERTopic: local UMAP/HDBSCAN fit + internal LLM representation calls (untracked)
     t0 = time.time()
     assignments = bertopic_run(entries, vecs)
     clusters = assignments_to_clusters(assignments)
     bertopic_secs = time.time() - t0
 
-    # LFE: local spaCy processing
     t0 = time.time()
     lfe_list = extract_batch(entries)
     lfe_secs = time.time() - t0
 
-    # generate report: one tracked LLM call
     t0 = time.time()
-    report, gen_in, gen_out = generate("BERTopic + LFE", entries, clusters, lfe_list)
+    report, gen_in, gen_out = generate("D: BERTopic + LLM Labels + LFE", entries, clusters, lfe_list)
     gen_secs = time.time() - t0
 
     total_secs = time.time() - total_start
 
-    # embed_secs counts as llm_secs only when we actually hit the API
     llm_secs = gen_secs + (embed_secs if embed_tokens > 0 else 0.0)
     preprocessing_secs = bertopic_secs + lfe_secs + (0.0 if embed_tokens > 0 else embed_secs)
 
@@ -49,7 +44,7 @@ def run(csv_path: str, source: str) -> ConditionArtifacts:
         total_seconds=round(total_secs, 2),
         preprocessing_seconds=round(preprocessing_secs, 2),
         llm_seconds=round(llm_secs, 2),
-        llm_calls=1,  # generate; BERTopic representation calls are library-internal and untracked
+        llm_calls=1,
         input_tokens=gen_in,
         output_tokens=gen_out,
         generation_model=GENERATION_MODEL,
@@ -64,7 +59,7 @@ def run(csv_path: str, source: str) -> ConditionArtifacts:
     )
 
     return ConditionArtifacts(
-        condition="BERTopic + LFE",
+        condition="D: BERTopic + LLM Labels + LFE",
         corpus_id=source,
         run_timestamp=datetime.utcnow(),
         report=report,

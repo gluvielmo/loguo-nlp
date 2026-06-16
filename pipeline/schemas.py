@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+from typing import Optional
 from pydantic import BaseModel, Field
 from datetime import date, datetime
 
@@ -9,8 +12,8 @@ class JournalEntry(BaseModel):
     metadata: dict = {}
 
 class LinguisticFeatures(BaseModel):
-    entry_id: str | None = None
-    user_id: str | None = None
+    entry_id: Optional[str] = None
+    user_id: Optional[str] = None
     processed_at: datetime = Field(default_factory=datetime.utcnow)
     word_count: int
     sentence_count: int
@@ -73,7 +76,7 @@ class Report(BaseModel):
     generated_at: datetime
     main_themes: list[Theme]
     subthemes: list[Theme]
-    temporal_evolution: dict
+    temporal_analysis: Optional[TemporalAnalysis] = None
     linguistic_patterns: dict
     representative_evidence: list[dict]
     surprising_patterns: list[str]
@@ -96,7 +99,6 @@ class RunMetrics(BaseModel):
 
     estimated_cost_usd: float = 0.0
 
-
 class ConditionArtifacts(BaseModel):
     condition: str
     corpus_id: str
@@ -107,3 +109,24 @@ class ConditionArtifacts(BaseModel):
     lfe_aggregated: dict
     metrics: RunMetrics = Field(default_factory=RunMetrics)
 
+class BinProfile(BaseModel):
+    entry_count: int
+    mean_word_count: float
+    negation_rate: float
+    uncertainty_rate: float
+    first_person_ratio: float
+    direct_question_rate: float
+    deliberative_question_rate: float
+    past_tense_rate: float
+
+class TemporalAnalysis(BaseModel):
+    emerging_themes: list[str]
+    declining_themes: list[str]
+    persistent_themes: list[str]
+    cyclical_themes: list[str]
+    framing_shifts: list[str]
+    turning_points: list[str]
+    early_evidence: list[str]
+    late_evidence: list[str]
+    uncertainty_notes: list[str]
+    period_summaries: dict

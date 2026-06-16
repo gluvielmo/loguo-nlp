@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 from pathlib import Path
 
@@ -65,11 +67,23 @@ def _to_markdown(artifacts: ConditionArtifacts) -> str:
             lines.append(f"- **{sub.name}**" + (f": {sub.description}" if sub.description else ""))
         lines.append("")
 
-    if r.temporal_evolution:
-        lines += ["## Temporal Evolution", ""]
-        for period, description in r.temporal_evolution.items():
-            lines.append(f"**{period}:** {description}")
-            lines.append("")
+    if r.temporal_analysis:
+        ta = r.temporal_analysis
+        lines += ["## Temporal Analysis", ""]
+        if ta.emerging_themes:
+            lines += ["**Emerging themes:** " + ", ".join(ta.emerging_themes), ""]
+        if ta.declining_themes:
+            lines += ["**Declining themes:** " + ", ".join(ta.declining_themes), ""]
+        if ta.persistent_themes:
+            lines += ["**Persistent themes:** " + ", ".join(ta.persistent_themes), ""]
+        if ta.framing_shifts:
+            lines += ["**Framing shifts:**"] + [f"- {s}" for s in ta.framing_shifts] + [""]
+        if ta.turning_points:
+            lines += ["**Turning points:**"] + [f"- {t}" for t in ta.turning_points] + [""]
+        if ta.period_summaries:
+            lines += ["**Period summaries:**"]
+            for period, summary in ta.period_summaries.items():
+                lines += [f"**{period}:** {summary}", ""]
 
     if r.linguistic_patterns:
         lines += ["## Linguistic Patterns", ""]

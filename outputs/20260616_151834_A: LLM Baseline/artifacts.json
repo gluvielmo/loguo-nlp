@@ -1,0 +1,78 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-16T15:18:34.153008",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-16T15:18:34.151967",
+    "main_themes": [
+      {
+        "name": "Parenting Challenges",
+        "description": "The entries explore the various challenges and joys of parenting, including the adjustments made for each child's needs, and the humorous chaos that ensues in a household with young children.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Identity",
+        "description": "Reflections on the evolution of the author's identity as a mother and individual, including insights into managing work-life balance and self-image. The struggles with postpartum experiences are evident throughout.",
+        "entry_ids": []
+      },
+      {
+        "name": "Family Dynamics",
+        "description": "The interactions within the family unit, relationships between siblings, and the impact of family history and traditions play a crucial role in the narrative. The entries highlight the author\u2019s bond with her parents and the subsequent legacy passed down to her children.",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and Coping Mechanisms",
+        "description": "The use of humor as a coping mechanism is prevalent, with witty observations about daily life serving as both entertainment and relief from the stresses of parenting and personal issues.",
+        "entry_ids": []
+      },
+      {
+        "name": "Health and Wellness",
+        "description": "The narratives frequently touch upon mental health, physical well-being related to pregnancy and postpartum health, and familial health experiences, underscoring the complexity of maintaining health in the family context.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": null,
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "surprising_patterns": [
+      "The consistent return to humor as a coping strategy for dealing with parenting stressors and personal challenges.",
+      "Frequent spontaneous reflections on mental health challenges, indicating a shift towards greater openness about struggles with postpartum experiences.",
+      "The evolution of the author's relationship with her parents, showing how those dynamics reshaped her own parenting style and attitudes."
+    ],
+    "reflection_questions": [
+      "What have been the most significant lessons learned throughout my parenting journey?",
+      "How can I continue to balance humor and seriousness as part of my family dynamic?",
+      "In what ways has my identity changed since becoming a mother?",
+      "How do family traditions and history influence my parenting style?",
+      "What self-care practices have I successfully implemented, and how can I improve them?"
+    ],
+    "limitations": [
+      "The analysis may reflect only the author's subjective experiences and may not capture varying perspectives within family dynamics.",
+      "Recurring themes could be influenced by the author's evolving writing style or external life events, rather than intrinsic changes in feelings or perspectives.",
+      "A limited temporal range, focusing primarily on emotions and thoughts from 2009 to 2010, may overlook broader trends and themes that could emerge in subsequent years."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 12.96,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 12.59,
+    "llm_calls": 1,
+    "input_tokens": 41641,
+    "output_tokens": 700,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006666
+  }
+}

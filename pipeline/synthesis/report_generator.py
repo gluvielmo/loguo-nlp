@@ -32,28 +32,36 @@ def generate(
         for eid in c.representative_entry_ids
     ]
 
-    linguistic_patterns = {
-        "avg_word_count": round(mean(f.word_count for f in lfe_list), 1),
-        "avg_negation_count": round(mean(f.negation_count for f in lfe_list), 2),
-        "avg_first_person_ratio": round(mean(f.first_person_pronoun_ratio for f in lfe_list), 4),
-        "avg_sentence_count": round(mean(f.sentence_count for f in lfe_list), 1),
-    }
+    if lfe_list:
+        linguistic_patterns = {
+            "avg_word_count": round(mean(f.word_count for f in lfe_list), 1),
+            "avg_negation_count": round(mean(f.negation_count for f in lfe_list), 2),
+            "avg_first_person_ratio": round(mean(f.first_person_pronoun_ratio for f in lfe_list), 4),
+            "avg_sentence_count": round(mean(f.sentence_count for f in lfe_list), 1),
+        }
+        lfe_context = f"""Linguistic patterns (averages):
+    - Words per entry: {linguistic_patterns['avg_word_count']}
+    - Negations per entry: {linguistic_patterns['avg_negation_count']}
+    - First-person pronoun ratio: {linguistic_patterns['avg_first_person_ratio']}"""
+    else:
+        linguistic_patterns = {}
+        lfe_context = "No linguistic feature extraction was applied."
 
-    theme_summary = "\n".join(
-        f"- {c.label}: {len(c.entry_ids)} entries ({c.description[:100]})"
-        for c in clusters
-    )
+    if clusters:
+        theme_summary = "\n".join(
+            f"- {c.label}: {len(c.entry_ids)} entries ({c.description[:100]})"
+            for c in clusters
+        )
+        theme_context = f"Themes discovered:\n    {theme_summary}"
+    else:
+        theme_context = "No topic structure applied — entries were not clustered."
 
     context = f"""Corpus: {corpus_size} journal entries from {date_range[0]} to {date_range[1]}.
     Condition: {condition_name}
 
-    Themes discovered:
-    {theme_summary}
+    {theme_context}
 
-    Linguistic patterns (averages):
-    - Words per entry: {linguistic_patterns['avg_word_count']}
-    - Negations per entry: {linguistic_patterns['avg_negation_count']}
-    - First-person pronoun ratio: {linguistic_patterns['avg_first_person_ratio']}
+    {lfe_context}
     """
 
     client = _get_client()

@@ -1,7 +1,6 @@
 import json
 import time
 from datetime import datetime
-from pathlib import Path
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -68,7 +67,7 @@ Respond with a JSON object with exactly these keys:
     usage = response.usage
 
     report = Report(
-        condition_name="LLM Only Baseline",
+        condition_name="A: LLM Baseline",
         corpus_size=len(entries),
         date_range=(min(e.date for e in entries), max(e.date for e in entries)),
         generated_at=datetime.utcnow(),
@@ -106,7 +105,7 @@ Respond with a JSON object with exactly these keys:
     )
 
     return ConditionArtifacts(
-        condition="LLM Only Baseline",
+        condition="A: LLM Baseline",
         corpus_id=source,
         run_timestamp=datetime.utcnow(),
         report=report,

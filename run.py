@@ -1,22 +1,34 @@
 import argparse
 from pathlib import Path
 
+ALL_CONDITIONS = list("ABCDEFGH")
+_USES_N_CLUSTERS = set("EFGH")
 
-def run_condition(condition: int, csv: str, source: str, output: str, n_clusters: int) -> Path:
+
+def run_condition(condition: str, csv: str, source: str, output: str, n_clusters: int) -> Path:
     from pipeline.artifacts.saver import save
 
-    if condition == 1:
-        from conditions.condition1 import run
-        artifacts = run(csv, source=source)
-    elif condition == 2:
-        from conditions.condition2 import run
-        artifacts = run(csv, source=source)
-    elif condition == 3:
-        from conditions.condition3 import run
+    if condition == "A":
+        from conditions.condition_a import run
+    elif condition == "B":
+        from conditions.condition_b import run
+    elif condition == "C":
+        from conditions.condition_c import run
+    elif condition == "D":
+        from conditions.condition_d import run
+    elif condition == "E":
+        from conditions.condition_e import run
+    elif condition == "F":
+        from conditions.condition_f import run
+    elif condition == "G":
+        from conditions.condition_g import run
+    elif condition == "H":
+        from conditions.condition_h import run
+
+    if condition in _USES_N_CLUSTERS:
         artifacts = run(csv, source=source, n_clusters=n_clusters)
-    elif condition == 4:
-        from conditions.condition4 import run
-        artifacts = run(csv, source=source, n_clusters=n_clusters)
+    else:
+        artifacts = run(csv, source=source)
 
     run_dir = save(artifacts, output_dir=output)
     print(f"Condition {condition} complete → {run_dir}")
@@ -25,8 +37,8 @@ def run_condition(condition: int, csv: str, source: str, output: str, n_clusters
 
 def main():
     parser = argparse.ArgumentParser(description="Longitudinal journal analysis pipeline")
-    parser.add_argument("--condition", type=int, choices=[1, 2, 3, 4],
-                        help="Which condition to run. Omit to run all 4.")
+    parser.add_argument("--condition", type=str, choices=ALL_CONDITIONS,
+                        help="Which condition to run (A–H). Omit to run all 8.")
     parser.add_argument("--csv", type=str, default="data/dooce_2009_2023.csv",
                         help="Path to the corpus CSV file")
     parser.add_argument("--source", type=str, default="dooce",
@@ -34,10 +46,10 @@ def main():
     parser.add_argument("--output", type=str, default="outputs",
                         help="Directory to save artifacts")
     parser.add_argument("--n-clusters", type=int, default=20,
-                        help="Number of clusters (conditions 3 and 4 only)")
+                        help="Number of clusters (conditions E, F, G, H only)")
     args = parser.parse_args()
 
-    conditions = [args.condition] if args.condition else [1, 2, 3, 4]
+    conditions = [args.condition] if args.condition else ALL_CONDITIONS
     run_dirs = []
 
     for c in conditions:
