@@ -70,26 +70,36 @@ class Theme(BaseModel):
     entry_ids: list[str]
 
 class BinProfile(BaseModel):
+    # Volume
     entry_count: int
     mean_word_count: float
+    # Ratios (normalized per-entry averages)
     negation_rate: float
     uncertainty_rate: float
+    pressure_word_rate: float
+    difficulty_rate: float
+    crisis_indicator_rate: float
     first_person_ratio: float
+    passive_voice_rate: float
+    active_voice_rate: float
+    past_tense_rate: float
     direct_question_rate: float
     deliberative_question_rate: float
-    past_tense_rate: float
+    # Raw counts (rare / high-signal features only)
+    crisis_indicator_count: int
+    direct_question_count: int
+    deliberative_question_count: int
+    # Top-N frequent terms per bin
+    top_predicate_adjectives: list[str] = []
+    top_uncertainty_terms: list[str] = []
+    top_negation_terms: list[str] = []
+    top_named_entities: list[str] = []
+    top_temporal_expressions: list[str] = []
 
 class TemporalAnalysis(BaseModel):
-    emerging_themes: list[str]
-    declining_themes: list[str]
-    persistent_themes: list[str]
-    cyclical_themes: list[str]
-    framing_shifts: list[str]
-    turning_points: list[str]
-    early_evidence: list[str]
-    late_evidence: list[str]
-    uncertainty_notes: list[str]
-    period_summaries: dict
+    corpus_overview: str
+    temporal_arc: list[dict]
+    synthesis: str
 
 class Report(BaseModel):
     condition_name: str
@@ -101,8 +111,6 @@ class Report(BaseModel):
     temporal_analysis: Optional[TemporalAnalysis] = None
     linguistic_patterns: dict
     representative_evidence: list[dict]
-    surprising_patterns: list[str]
-    reflection_questions: list[str]
     limitations: list[str]
 
 class RunMetrics(BaseModel):

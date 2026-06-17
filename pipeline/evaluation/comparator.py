@@ -38,18 +38,29 @@ def compare(run_dirs: list[str | Path], output_path: str | Path = "outputs/compa
             lines.append(f"- {theme.name}")
         lines.append("")
 
-    lines += ["## Surprising Patterns", ""]
+    lines += ["## Corpus Overview", ""]
     for a in all_artifacts:
         lines.append(f"### [{a.condition}]")
-        for p in a.report.surprising_patterns[:3]:
-            lines.append(f"- {p}")
+        if a.report.temporal_analysis and a.report.temporal_analysis.corpus_overview:
+            lines.append(a.report.temporal_analysis.corpus_overview)
+        else:
+            lines.append("*(no corpus overview)*")
         lines.append("")
 
-    lines += ["## Reflection Questions", ""]
+    lines += ["## Synthesis", ""]
     for a in all_artifacts:
         lines.append(f"### [{a.condition}]")
-        for i, q in enumerate(a.report.reflection_questions[:3], 1):
-            lines.append(f"{i}. {q}")
+        if a.report.temporal_analysis and a.report.temporal_analysis.synthesis:
+            lines.append(a.report.temporal_analysis.synthesis)
+        else:
+            lines.append("*(no synthesis)*")
+        lines.append("")
+
+    lines += ["## Limitations", ""]
+    for a in all_artifacts:
+        lines.append(f"### [{a.condition}]")
+        for lim in a.report.limitations:
+            lines.append(f"- {lim}")
         lines.append("")
 
     output_path = Path(output_path)

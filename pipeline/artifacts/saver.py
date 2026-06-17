@@ -36,8 +36,8 @@ def _to_markdown(artifacts: ConditionArtifacts) -> str:
         "",
         "## Run Metrics",
         "",
-        f"| Metric | Value |",
-        f"|--------|-------|",
+        "| Metric | Value |",
+        "|--------|-------|",
         f"| Total runtime | {artifacts.metrics.total_seconds:.1f}s |",
         f"| Preprocessing (local) | {artifacts.metrics.preprocessing_seconds:.1f}s |",
         f"| LLM time | {artifacts.metrics.llm_seconds:.1f}s |",
@@ -69,38 +69,29 @@ def _to_markdown(artifacts: ConditionArtifacts) -> str:
 
     if r.temporal_analysis:
         ta = r.temporal_analysis
-        lines += ["## Temporal Analysis", ""]
-        if ta.emerging_themes:
-            lines += ["**Emerging themes:** " + ", ".join(ta.emerging_themes), ""]
-        if ta.declining_themes:
-            lines += ["**Declining themes:** " + ", ".join(ta.declining_themes), ""]
-        if ta.persistent_themes:
-            lines += ["**Persistent themes:** " + ", ".join(ta.persistent_themes), ""]
-        if ta.framing_shifts:
-            lines += ["**Framing shifts:**"] + [f"- {s}" for s in ta.framing_shifts] + [""]
-        if ta.turning_points:
-            lines += ["**Turning points:**"] + [f"- {t}" for t in ta.turning_points] + [""]
-        if ta.period_summaries:
-            lines += ["**Period summaries:**"]
-            for period, summary in ta.period_summaries.items():
-                lines += [f"**{period}:** {summary}", ""]
+        lines += ["## Patterns & Analysis", ""]
+
+        if ta.corpus_overview:
+            lines += ["### Corpus Overview", "", ta.corpus_overview, ""]
+
+        if ta.temporal_arc:
+            lines += ["### Temporal Arc", ""]
+            for bin_entry in ta.temporal_arc:
+                period = bin_entry.get("period", "")
+                lines.append(f"**{period}**")
+                if tc := bin_entry.get("theme_composition"):
+                    lines += ["", tc]
+                if lr := bin_entry.get("linguistic_register"):
+                    lines += ["", f"*{lr}*"]
+                lines.append("")
+
+        if ta.synthesis:
+            lines += ["### Synthesis", "", ta.synthesis, ""]
 
     if r.linguistic_patterns:
         lines += ["## Linguistic Patterns", ""]
         for key, value in r.linguistic_patterns.items():
             lines.append(f"- {key}: {value}")
-        lines.append("")
-
-    if r.surprising_patterns:
-        lines += ["## Surprising Patterns", ""]
-        for p in r.surprising_patterns:
-            lines.append(f"- {p}")
-        lines.append("")
-
-    if r.reflection_questions:
-        lines += ["## Reflection Questions", ""]
-        for i, q in enumerate(r.reflection_questions, 1):
-            lines.append(f"{i}. {q}")
         lines.append("")
 
     if r.limitations:

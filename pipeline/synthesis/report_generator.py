@@ -6,20 +6,54 @@ from pipeline.embeddings.embedder import _get_client
 from pipeline.schemas import Cluster, JournalEntry, LinguisticFeatures, Report, Theme, TemporalAnalysis
 from pipeline.temporal.analyzer import bucket_entries, corpus_temporal, theme_temporal
 
+
 def _to_str_list(items: list) -> list[str]:
     return [json.dumps(item) if isinstance(item, dict) else str(item) for item in items]
 
 
 def _format_bin(period: str, p) -> str:
-    return (
-        f"{period} | {p.entry_count} entries | avg {p.mean_word_count:.0f} words"
+    lines = [
+        f"{period} | {p.entry_count} entries | avg {p.mean_word_count:.0f} words",
+        f"  ratios: 1st-person {p.first_person_ratio:.3f}"
         f" | negation {p.negation_rate:.3f}"
         f" | uncertainty {p.uncertainty_rate:.3f}"
-        f" | 1st-person {p.first_person_ratio:.3f}"
-        f" | direct_q {p.direct_question_rate:.3f}"
-        f" | deliberative_q {p.deliberative_question_rate:.3f}"
-        f" | past_tense {p.past_tense_rate:.3f}"
-    )
+        f" | pressure {p.pressure_word_rate:.3f}"
+        f" | difficulty {p.difficulty_rate:.3f}"
+        f" | crisis {p.crisis_indicator_rate:.3f}",
+        f"  voice/tense: passive {p.passive_voice_rate:.3f}"
+        f" | active {p.active_voice_rate:.3f}"
+        f" | past_tense {p.past_tense_rate:.3f}",
+        f"  questions: direct_rate {p.direct_question_rate:.3f}"
+        f" | deliberative_rate {p.deliberative_question_rate:.3f}",
+        f"  raw counts: crisis={p.crisis_indicator_count}"
+        f" | direct_q={p.direct_question_count}"
+        f" | delib_q={p.deliberative_question_count}",
+    ]
+    if p.top_predicate_adjectives:
+        lines.append(f"  top_adj: {', '.join(p.top_predicate_adjectives)}")
+    if p.top_uncertainty_terms:
+        lines.append(f"  top_uncertainty: {', '.join(p.top_uncertainty_terms)}")
+    if p.top_negation_terms:
+        lines.append(f"  top_negation: {', '.join(p.top_negation_terms)}")
+    if p.top_named_entities:
+        lines.append(f"  top_entities: {', '.join(p.top_named_entities)}")
+    if p.top_temporal_expressions:
+        lines.append(f"  top_temporal: {', '.join(p.top_temporal_expressions)}")
+    return "\n".join(lines)
+
+
+_SYSTEM_PROMPT = (
+    "You are an expert in longitudinal analysis of personal writing. "
+    "Write exclusively in second person (\"you wrote...\", \"your entries...\", \"your writing...\"). "
+    "Your role is to describe and analyze patterns in the corpus — not to advise. "
+    "Never use phrases like \"you should\", \"you might consider\", \"it would be helpful to\", "
+    "\"this suggests you would benefit from\", or any construction that implies what the writer "
+    "should do, even when softened or embedded in an otherwise descriptive sentence. "
+    "If a finding has an obvious actionable implication, state the finding only — not the implied action. "
+    "Hedge all interpretive claims: use language like \"this may suggest...\", "
+    "\"this could reflect...\", or \"one possible reading is...\". "
+    "Psychological interpretation must be explicitly marked as speculative."
+)
 
 
 def generate(
@@ -38,9 +72,9 @@ def generate(
 
     if corpus_prof:
         corpus_lines = "\n".join(_format_bin(period, p) for period, p in corpus_prof.items())
-        corpus_temporal_analysis = f"Corpus temporal analysis:\n{corpus_lines}"
+        corpus_temporal_section = f"Corpus-level LFE by bin:\n{corpus_lines}"
     else:
-        corpus_temporal_analysis = "No temporal analysis applied to the corpus."
+        corpus_temporal_section = "No LFE data available — linguistic register metrics are not included."
 
     if theme_prof:
         theme_lines = []
@@ -48,8 +82,13 @@ def generate(
             theme_lines.append(f"Theme: {theme}")
             for period, prof in periods.items():
                 theme_lines.append(f"  {_format_bin(period, prof)}")
+        theme_temporal_section = "Theme-level LFE by bin:\n" + "\n".join(theme_lines)
+    else:
+        theme_temporal_section = ""
 
-        theme_temporal_analysis = "Theme temporal analysis:\n" + "\n".join(theme_lines)
+    temporal_context = corpus_temporal_section
+    if theme_temporal_section:
+        temporal_context += "\n\n" + theme_temporal_section
 
     main_themes = [
         Theme(name=c.label, description=c.description, entry_ids=c.entry_ids) for c in clusters
@@ -74,36 +113,31 @@ def generate(
             "avg_first_person_ratio": round(mean(f.first_person_pronoun_ratio for f in lfe_list), 4),
             "avg_sentence_count": round(mean(f.sentence_count for f in lfe_list), 1),
         }
-        lfe_context = f"""Linguistic patterns (averages):
-    - Words per entry: {linguistic_patterns['avg_word_count']}
-    - Negations per entry: {linguistic_patterns['avg_negation_count']}
-    - First-person pronoun ratio: {linguistic_patterns['avg_first_person_ratio']}"""
+        lfe_context = f"""Corpus-wide LFE averages:
+  - Words per entry: {linguistic_patterns['avg_word_count']}
+  - Negations per entry: {linguistic_patterns['avg_negation_count']}
+  - First-person pronoun ratio: {linguistic_patterns['avg_first_person_ratio']}"""
     else:
         linguistic_patterns = {}
-        lfe_context = "No linguistic feature extraction was applied."
+        lfe_context = "No linguistic feature extraction was applied to this condition."
 
     if clusters:
+        total_entries = sum(len(c.entry_ids) for c in clusters)
         theme_summary = "\n".join(
-            f"- {c.label}: {len(c.entry_ids)} entries ({c.description[:100]})"
-            for c in clusters
+            f"  - {c.label}: {len(c.entry_ids)} entries"
+            f" ({len(c.entry_ids)/total_entries*100:.1f}%) — {c.description[:120]}"
+            for c in sorted(clusters, key=lambda c: len(c.entry_ids), reverse=True)
         )
-        theme_context = f"Themes discovered:\n    {theme_summary}"
+        theme_context = f"Themes (sorted by size):\n{theme_summary}"
     else:
         theme_context = "No topic structure applied — entries were not clustered."
 
-    context = f"""Corpus: {corpus_size} journal entries from {date_range[0]} to {date_range[1]}.
-    Condition: {condition_name}
+    context = f"""Corpus: {corpus_size} journal entries spanning {date_range[0]} to {date_range[1]}.
+Condition: {condition_name}
 
-    {theme_context}
+{theme_context}
 
-    {lfe_context}
-    """
-
-    temporal_context = corpus_temporal_analysis
-
-    if theme_prof:
-        temporal_context += "\n\n" + theme_temporal_analysis
-
+{lfe_context}"""
 
     client = _get_client()
 
@@ -111,34 +145,41 @@ def generate(
         model="gpt-4o-mini",
         response_format={"type": "json_object"},
         messages=[
-            {
-                "role": "system",
-                "content": "You are an expert in longitudinal analysis of personal writing and psychological patterns."
-            },
+            {"role": "system", "content": _SYSTEM_PROMPT},
             {
                 "role": "user",
-                "content": f"""Based on this journal corpus analysis, provide interpretive insights.
+                "content": f"""Analyze this longitudinal journal corpus and produce a structured interpretive report.
 
-                            {context}
+{context}
 
-                            === Temporal LFE Profiles ===
-                            {temporal_context}
+=== Temporal LFE Profiles ===
+{temporal_context}
 
-                            Using the LFE data above, respond with a JSON object with exactly these keys:
-                            - "emerging_themes": list of strings — themes that grow in frequency or intensity over time
-                            - "declining_themes": list of strings — themes that shrink or fade
-                            - "persistent_themes": list of strings — themes stable across the full time range
-                            - "cyclical_themes": list of strings — themes that disappeared and returned
-                            - "framing_shifts": list of strings, each a complete sentence describing how emotional or linguistic framing changed within a theme over time. Cite specific LFE metrics and periods. Example: ["The Parenting cluster shifted from humor in 2009 to exhaustion by 2015, reflected in rising negation rates (0.018 → 0.031)"]
-                            - "turning_points": list of strings, each a complete sentence identifying a specific period where something shifted noticeably, with evidence. Example: ["2012-06 shows a spike in uncertainty rate (0.041) across the Depression cluster, suggesting a period of heightened doubt"]
-                            - "early_evidence": list of strings — notable patterns from the earliest period
-                            - "late_evidence": list of strings — notable patterns from the most recent period
-                            - "uncertainty_notes": list of strings — limitations or alternative explanations for what you observed
-                            - "period_summaries": dict mapping period labels to a one-sentence description of that period
-                            - "surprising_patterns": list of 3-5 strings describing unexpected findings
-                            - "reflection_questions": list of 5 questions the journaler might reflect on
-                            - "limitations": list of 2-3 strings describing limitations of this analysis
-                            """
+Respond with a JSON object containing exactly these keys:
+
+"corpus_overview"
+A single prose paragraph (second person) covering:
+- Total volume and time span
+- Dominant theme(s) by approximate proportion of entries
+- Notable minority or marginal themes — not just the largest clusters
+- Overall compositional character
+
+"temporal_arc"
+A list of objects, one per time bin listed above, in chronological order.
+Merge adjacent bins with fewer than 10 entries into a single object rather than reporting them separately.
+Each object must have exactly:
+  "period": the bin label (e.g. "early", "2012-06", "2009–2012")
+  "theme_composition": 1–2 sentences on how theme weight or mix shifted in this period vs. adjacent periods. Name specific themes and approximate proportions.
+  "linguistic_register": 1–2 sentences on how the writing style shifted in this period, citing specific LFE metrics and their values from the data above (e.g. first-person ratio, negation rate, uncertainty rate, past-tense rate, pressure-word rate). If no LFE data is available for this condition, state that explicitly in this field.
+
+"synthesis"
+A single closing paragraph connecting dominant themes to linguistic register patterns over time.
+Example form: "The cluster focused on X coincided with elevated negation rates (0.031) during mid-2013, which may suggest..."
+Mark any psychological interpretation as speculative. Do not offer advice, recommendations, or any prescriptive language.
+
+"limitations"
+A list of 2–3 strings identifying genuine limitations of this analysis — e.g. data gaps, cluster boundary ambiguity, LFE metric confounds.
+"""
             }
         ]
     )
@@ -146,16 +187,9 @@ def generate(
     data = json.loads(response.choices[0].message.content)
 
     temporal_analysis = TemporalAnalysis(
-        emerging_themes=_to_str_list(data.get("emerging_themes", [])),
-        declining_themes=_to_str_list(data.get("declining_themes", [])),
-        persistent_themes=_to_str_list(data.get("persistent_themes", [])),
-        cyclical_themes=_to_str_list(data.get("cyclical_themes", [])),
-        framing_shifts=_to_str_list(data.get("framing_shifts", [])),
-        turning_points=_to_str_list(data.get("turning_points", [])),
-        early_evidence=_to_str_list(data.get("early_evidence", [])),
-        late_evidence=_to_str_list(data.get("late_evidence", [])),
-        uncertainty_notes=_to_str_list(data.get("uncertainty_notes", [])),
-        period_summaries=data.get("period_summaries", {}),
+        corpus_overview=str(data.get("corpus_overview", "")),
+        temporal_arc=data.get("temporal_arc", []),
+        synthesis=str(data.get("synthesis", "")),
     )
 
     usage = response.usage
@@ -170,7 +204,5 @@ def generate(
         temporal_analysis=temporal_analysis,
         linguistic_patterns=linguistic_patterns,
         representative_evidence=representative_evidence,
-        surprising_patterns=data["surprising_patterns"],
-        reflection_questions=data["reflection_questions"],
-        limitations=data["limitations"],
+        limitations=_to_str_list(data.get("limitations", [])),
     ), usage.prompt_tokens, usage.completion_tokens
