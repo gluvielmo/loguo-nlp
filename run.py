@@ -39,8 +39,8 @@ def main():
                         help="Corpus identifier (used in entry IDs)")
     parser.add_argument("--output", type=str, default="outputs",
                         help="Directory to save artifacts")
-    parser.add_argument("--n-clusters", type=int, default=20,
-                        help="Number of clusters (conditions D, E only)")
+    parser.add_argument("--n-clusters", type=int, default=None,
+                        help="Number of clusters for conditions D, E (default: auto-selected via silhouette score)")
     args = parser.parse_args()
 
     conditions = [args.condition] if args.condition else ALL_CONDITIONS

@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 from sklearn.feature_extraction.text import CountVectorizer
 
+from pipeline.config import IMBALANCE_THRESHOLD
 from pipeline.schemas import Cluster, JournalEntry, TopicAssignment
 
 load_dotenv()
@@ -23,7 +24,7 @@ def build_models(n_docs: int) -> tuple[BERTopic, UMAP, HDBSCAN]:
         random_state = 42,
     )
     hdbscan_model = HDBSCAN(
-        min_cluster_size = 5,
+        min_cluster_size = 10,
         min_samples      = 1,
         metric           = "euclidean",
         prediction_data  = True,
@@ -47,14 +48,18 @@ def build_models(n_docs: int) -> tuple[BERTopic, UMAP, HDBSCAN]:
         min_topic_size=5,
         verbose=False,
     )
-    return topic_model, umap_model, hdbscan_model
+    return topic_model, umap_model, hdbscan_model, representation_model
 
 def run(entries: list[JournalEntry], embeddings: np.ndarray) -> list[TopicAssignment]:
     docs = [e.text for e in entries]
 
-    topic_model, _, _ = build_models(len(docs))
+    topic_model, _, _, representation_model = build_models(len(docs))
 
     topics, probs = topic_model.fit_transform(docs, embeddings)
+
+    topics = topic_model.reduce_outliers(docs, topics, probabilities=probs, strategy="probabilities")
+
+    topic_model.update_topics(docs, topics=topics, representation_model=representation_model)
 
     topic_info = topic_model.get_topic_info()
     topic_names = dict(zip(topic_info["Topic"], topic_info["Name"]))
@@ -103,5 +108,17 @@ def assignments_to_clusters(assignments: list[TopicAssignment]) -> list[Cluster]
             labeling_method="bertopic"
         )
         clusters.append(cluster)
+
+    total = len(assignments)
+
+    for cluster in clusters:
+        share = len(cluster.entry_ids) / total
+
+        if share > IMBALANCE_THRESHOLD:
+            print(
+                f"[WARNING] cluster {cluster.cluster_id} contains {share:.1%} of entries "
+                f"— possible catch-all. Run isolation sub-clustering to check for "
+                f"real substructure before interpreting this as a coherent theme."
+            )
 
     return clusters

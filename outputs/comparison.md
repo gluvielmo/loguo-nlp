@@ -4,106 +4,105 @@
 
 | Condition | Entries | Themes | Runtime | Preproc | LLM calls | In tokens | Out tokens | Embed tokens | Est. cost |
 |-----------|---------|--------|---------|---------|-----------|-----------|------------|--------------|-----------|
-| A: LLM Baseline | 500 | 5 | 49.5s | 0.0s | 1 | 41,917 | 942 | 0 | $0.0069 |
-| B: BERTopic + LLM Labels | 500 | 12 | 24.4s | 15.3s | 1 | 828 | 472 | 0 | $0.0004 |
-| C: BERTopic + LLM Labels + LFE | 500 | 12 | 77.2s | 22.3s | 1 | 17,643 | 1,089 | 0 | $0.0033 |
-| D: Hierarchical + LLM Labels | 500 | 20 | 57.8s | 0.2s | 21 | 9,152 | 3,509 | 0 | $0.0035 |
-| E: Hierarchical + LLM Labels + LFE | 500 | 20 | 82.6s | 12.9s | 21 | 22,819 | 4,294 | 0 | $0.0060 |
+| A: LLM Baseline | 500 | 4 | 23.8s | 0.0s | 1 | 41,917 | 857 | 0 | $0.0068 |
+| B: BERTopic + LLM Labels | 500 | 12 | 74.6s | 53.1s | 1 | 1,114 | 1,053 | 0 | $0.0008 |
+| C: BERTopic + LLM Labels + LFE | 500 | 12 | 79.2s | 43.3s | 1 | 17,230 | 2,118 | 0 | $0.0039 |
+| D: Hierarchical + LLM Labels | 500 | 20 | 71.0s | 1.0s | 21 | 28,219 | 3,634 | 0 | $0.0064 |
+| E: Hierarchical + LLM Labels + LFE | 500 | 20 | 108.6s | 13.2s | 21 | 43,529 | 5,568 | 0 | $0.0099 |
 
 ## Main Themes
 
 ### [A: LLM Baseline]
 - Motherhood and Parenting
-- Personal Growth and Challenges
-- Family Dynamics
-- Pets and Home Life
-- Seasonal Changes and Nature
+- Home and Family Life
+- Personal Growth and Health
+- Humor and Everyday Life
 
 ### [B: BERTopic + LLM Labels]
-- 0_Childbirth Experience
-- 1_Home Decor Gifts
-- 5_Nature and Memory
-- 2_Personal care experiences
-- 9_Organizing baby essentials
+- 0_Pregnancy and childbirth
+- 8_Baby nursery project
+- 1_Life with dogs
+- 6_Nature and Grief
+- 11_Hair and body care
 
 ### [C: BERTopic + LLM Labels + LFE]
-- 0_Birth Experience Insights
-- 1_Nursery and gift ideas
-- 5_Nature and Reflection
-- 2_Beauty and self-care
-- 9_Organizing baby essentials
+- 0_Parenthood and childbirth
+- 8_Nursery Design Projects
+- 1_Life with dogs
+- 6_Nature and Grief
+- 11_Hair and beauty experiences
 
 ### [D: Hierarchical + LLM Labels]
-- Chaos and Parental Humor
-- Nostalgia and Parenting Insights
-- Innocence and Embarrassment
-- Overwhelmed by Chaos
-- Sensory Comfort and Attachment
+- Joy and Personal Connection
+- Parenting Challenges and Humor
+- Nature and Transition
+- Self-identity and confidence
+- Transformation and Resilience
 
 ### [E: Hierarchical + LLM Labels + LFE]
+- Joyful Anticipation and Nostalgia
 - Parenting Challenges and Humor
-- Curiosity and Wonder
-- Childhood Innocence and Boundaries
-- Chaos and Control
-- Comfort in Scented Products
+- Nature and Emotional Reflection
+- Self-Expression and Identity
+- Maternal Transformation and Recovery
 
 ## Corpus Overview
 
 ### [A: LLM Baseline]
-The journal corpus encompasses 500 entries covering a span of approximately two years, predominantly reflecting the journey of motherhood and parenting, which likely constitutes the largest thematic proportion. The next most significant theme is personal growth and challenges, with many entries highlighting experiences and reflections on mental health amidst parenting responsibilities. Family dynamics are also profoundly explored, showcasing the intricate relationships within your family. Pets and the whimsical aspects of home life serve as notable minority themes that bring a lighthearted perspective to everyday experiences. The overall compositional character of your writing is conversational, engaging, and infused with humor, often combining poignant reflections with humorous observations on the chaos of family life.
+The journal spans from January 2009 to October 2010, encompassing over 500 entries. The dominant themes constitute approximately 50% of the corpus, with a strong focus on Motherhood and Parenting, complemented by Home and Family Life, accounting for about 30%. The remaining entries include themes of Personal Growth and Health as well as Humor, making up 10-20%. Overall, your writing blends observations of daily life with deeper reflections on personal experiences, characterized by an engaging, humorous, and often candid tone that invites readers into your world.
 
 ### [B: BERTopic + LLM Labels]
-Your journal corpus consists of 500 entries spanning from January 5, 2009, to March 3, 2010. The predominant theme is the childbirth experience, comprising approximately 72.1% of the entries, indicating a significant focus on this life event and its surrounding emotions and experiences. Notable minority themes include home decor gifts (9.5%) and a variety of other subjects, such as personal care, winter reflections, family celebrations, and nature, each contributing a smaller but meaningful portion to your writing. Overall, your compositional character seems to reflect a deep engagement with familial and personal milestones, primarily centered around childbirth during this period, while also touching on a diverse range of experiences and reflections.
+Your journal corpus encompasses 500 entries spanning from January 5, 2009, to March 3, 2010. The dominant theme throughout this period is pregnancy and childbirth, representing approximately 31.4% of your entries, followed by life with dogs at 21.8%. Additional minority themes include parenting and relationships, holiday gift guides, and travel experiences, among others. Overall, your writing demonstrates a personal, reflective character, heavily focused on significant life events and relationships, particularly those tied to family and the expectations of parenthood.
 
 ### [C: BERTopic + LLM Labels + LFE]
-Your journal corpus consists of 500 entries spanning from January 5, 2009, to March 3, 2010. The dominant theme throughout this time was 'Birth Experience Insights', which made up approximately 72.1% of your entries, reflecting a strong preoccupation with the birth milestones and related experiences. Notable minority themes included 'Nursery and gift ideas' (9.5%), 'Beauty and self-care' (2.5%), and 'Family gatherings and celebrations' (2.5%), among others. The overall compositional character of your writing appears reflective and personal, with frequent engagement in self-inquiry and the exploration of emotions surrounding key life events.
+Your journal corpus consists of 500 entries spanning from January 5, 2009, to March 3, 2010. The dominant themes are centered around parenthood and childbirth, which collectively account for approximately 31.4% of your entries, and life with dogs at about 21.8%. Additional notable themes include pregnancy and parenthood, parental experiences, and holiday gift guides. The overall compositional character of your writing exhibits a narrative richness marked by emotional engagement and reflections on daily life dynamics.
 
 ### [D: Hierarchical + LLM Labels]
-The corpus consists of 500 journal entries spanning from January 5, 2009, to March 3, 2010. The dominant theme throughout your writing is chaos and parental humor, which encompasses approximately 88% of your entries. Notable minority themes include appreciation of home and beauty, sensory comfort and attachment, and whimsy and playfulness, which collectively account for a modest 4% of the writing. The overall compositional character reflects a blend of humor amidst the chaos of parenting, showcasing how personal experiences—including stress and joy—intertwine with daily observations and reflections.
+You wrote a total of 500 journal entries spanning from January 5, 2009, to March 3, 2010. The dominant themes throughout your writing were Transformation and Resilience (22.6%) and Parenting Challenges and Humor (11.6%), reflecting significant personal growth and the complexities of family life. Notable minority themes included Life with Pets (8.2%) and Nature and Transition (8.0%), indicating a connection to the environment and the companionship of animals. Overall, your compositional character appears to blend introspection with humor, capturing the myriad experiences of daily life.
 
 ### [E: Hierarchical + LLM Labels + LFE]
-Your journal corpus comprises 500 entries penned over a time span from January 5, 2009, to March 3, 2010. The dominant theme throughout your writings is 'Parenting Challenges and Humor,' accounting for approximately 88% of all entries. Notable minority themes include 'Appreciation of Home and Beauty' and 'Comfort in Scented Products,' though these represent a much smaller portion at 2.2% and 1.4%, respectively. The overall compositional character of your writing reflects a blend of humor and light-heartedness amid the often chaotic and challenging nuances of parenting.
+The journal corpus spans a total of 500 entries from January 5, 2009, to March 3, 2010. The writing centers primarily around maternal transformation and recovery, which accounts for approximately 22.6% of the entries, followed by several other significant themes, including parenting challenges and humor (11.6%) and chaos and playfulness in life (8.2%). Notable minority themes include emotional attachment to scent and ritual and anxiety and interpersonal conflict, each with a smaller proportion of entries. The overall compositional character leans towards a reflective and confessional style, often infused with humor and emotion, indicating a deep engagement with both personal and familial experiences.
 
 ## Synthesis
 
 ### [A: LLM Baseline]
-Over time, the dominant themes of motherhood, personal growth, and family dynamics deeply intertwine with your writing style, which remains conversational and humorous throughout. As your experiences as a parent accumulate, the reflections grow more nuanced, with emotional layers accompanying the humor. This suggests a capacity to navigate the complexities of life while recognizing and articulating personal challenges, which may reflect a journey of resilience in the face of the demands of motherhood.
+The dominant themes of Motherhood and Parenting, Home Life, and Personal Growth bring forward a recurring dialogue about the joys and struggles of nurturing both children and self. Your evolving tone portrays both the heartfelt complexity and humor that characterize parenting, suggesting a journey that is both challenging and rewarding. Possible psychological reflections within these themes indicate an adaptive coping mechanism where humor serves as a significant tool for managing the pressures and joys of family life.
 
 ### [B: BERTopic + LLM Labels]
-The dominant theme of the childbirth experience may reflect intense emotional and psychological engagement during this life transition, possibly coinciding with changes in writing style as other themes begin to emerge in the later entries. The absence of linguistic feature extraction data limits the ability to draw more nuanced connections between these themes and stylistic shifts, making it speculative to assert any specific patterns in the writing register during this period.
+The prominence of themes like pregnancy and childbirth corresponded with a high rate of past-tense usage during mid-2009 (0.45), which may suggest a focus on experiences and anticipatory narratives. As you shifted to topics related to parenting and relationships, the uncertainty rate increased, possibly reflecting the complexities and evolving dynamics associated with your new role as a parent.
 
 ### [C: BERTopic + LLM Labels + LFE]
-The sustained emphasis on 'Birth Experience Insights' throughout the corpus corresponds with a generally low negation rate and steady first-person usage, suggesting a confident exploration of personal experiences related to childbirth. However, as additional themes emerged, particularly in the latter part of the observed period, fluctuations in negation and uncertainty rates may reflect shifting emotional states and a broader engagement with life beyond the immediate experience of parenthood. This could suggest an evolving identity in response to new roles and responsibilities.
+The dominant focus on parenthood and childbirth throughout the corpus coincided with a varying first-person pronoun ratio, which peaked at 0.074 in the early entries. This could reflect a growing personal engagement and emotional investment in these themes. The fluctuations in uncertainty rates, particularly during periods of increased focus on pregnancy and family life, may suggest a complex interplay of anticipation and apprehension in your experiences as a parent.
 
 ### [D: Hierarchical + LLM Labels]
-The pattern of chaos and parental humor is distinctly marked throughout the entirety of your writing and aligns with a perceived ongoing engagement in the challenges and joys of parenting. The lack of linguistic feature extraction data may limit the understanding of stylistic shifts that could further illuminate emotional undercurrents, yet the recurring themes may suggest a deep engagement with both the turmoil and humor found in daily life as a parent.
+The sustained focus on Transformation and Resilience along with Parenting Challenges and Humor signifies a blend of introspective and familial elements in your writing. One possible interpretation is that the absence of LFE data may mask variations in emotional tone or intensity as themes evolved, suggesting that deeper psychological nuances could be present despite stability in surface-level content.
 
 ### [E: Hierarchical + LLM Labels + LFE]
-The sustained focus on 'Parenting Challenges and Humor' throughout the corpus coincided with relatively consistent first-person pronoun usage, averaging around 0.063, indicating a deeply personal engagement with the subject matter. The fluctuations in negation rates, particularly the increase to 0.025 in early 2010, may suggest escalating internal conflicts or more critical reflections as your experiences in parenting evolved.
+The narratives surrounding maternal transformation and recovery dominated the corpus, coinciding with elevated first-person pronoun usage (0.060) and a gradual increase in uncertainty rates, which may suggest an ongoing process of self-definition and emotional complexity related to motherhood. Simultaneously, parenting challenges and humor, even as it declined, remained impactful, especially reflected by occasional spikes in direct questioning (0.146), indicating that the writer engaged actively with the uncertainties of parenting in humorous ways. The interplay between chaotic themes and reflective self-expression throughout the entries could reflect a balancing act between maintaining humor and processing underlying emotional challenges.
 
 ## Limitations
 
 ### [A: LLM Baseline]
-- This analysis focuses solely on thematic content without incorporating quantifiable linguistic features.
-- There may be subjective interpretations of themes that can vary based on individual reader perspectives.
-- The emotional or psychological interpretations suggested are speculative and may not fully capture the writer's intent.
+- This analysis primarily focuses on thematic exploration without delving into deeper emotional complexities.
+- Longitudinal patterns may be influenced by external circumstances not reflected in the writing itself.
+- The subjective nature of personal writing can lead to biased representations of experiences.
 
 ### [B: BERTopic + LLM Labels]
-- No linguistic feature extraction data available for assessing writing style.
-- The theme boundary definitions may introduce ambiguity in understanding theme transitions.
-- Limited exploration of psychological aspects due to the absence of contextual factors in the entries.
+- Absence of linguistic feature extraction limits the analysis of nuanced shifts in writing style.
+- Theme boundaries may overlap, making it challenging to delineate distinct experiences.
+- Potential biases in the frequency of entries may not represent daily experiences accurately.
 
 ### [C: BERTopic + LLM Labels + LFE]
-- Data gaps may exist in emotional expression due to the overall dominance of a single theme.
-- The constraints of LFE metrics may not fully capture the complexities of emotional and psychological states.
-- The ambiguity in theme boundaries may lead to underrepresentation or overrepresentation of emerging life experiences.
+- The analysis relies solely on the written entries, which may not capture the full context of experiences.
+- The clustering of themes may obscure nuanced individual experiences within overlapping areas.
+- The fluctuating nature of LFE metrics could be influenced by life events not wholly described in the written entries.
 
 ### [D: Hierarchical + LLM Labels]
-- No linguistic feature extraction data available, limiting insights into writing style changes.
-- Potential ambiguity in theme boundaries, particularly among minor themes.
-- The analysis covers only a snapshot of entries, which may not capture complete contextual or emotional nuances.
+- Lack of linguistic feature extraction limits analysis of writing style and emotional expression.
+- Themes were not explored within potentially overlapping categories, which may obscure finer distinctions.
+- Insufficient context on external events during the timeframe may restrict understanding of influences on thematic shifts.
 
 ### [E: Hierarchical + LLM Labels + LFE]
-- The corpus has a significant imbalance in thematic representation, which may skew interpretations of emotional states.
-- There are gaps in data for certain months, particularly in the nuanced exploration of less dominant themes.
-- Linguistic metrics may not fully account for the emotional complexity or intent behind specific entries.
+- Potential gaps in the emotional depth of themes due to self-censorship in journaling.
+- The temporal organization of themes may overlap and create boundaries that are not distinctly separable.
+- LFE metrics may mask subtleties in narrative tone that are not solely quantitative.

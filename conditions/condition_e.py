@@ -13,7 +13,7 @@ from pipeline.labeling.llm_labeler import label_all as llm_label_all
 from pipeline.synthesis.report_generator import generate
 
 
-def run(csv_path: str, source: str, n_clusters: int = 20) -> ConditionArtifacts:
+def run(csv_path: str, source: str, n_clusters: int | None = None) -> ConditionArtifacts:
     total_start = time.time()
 
     entries = load_entries(csv_path, source)

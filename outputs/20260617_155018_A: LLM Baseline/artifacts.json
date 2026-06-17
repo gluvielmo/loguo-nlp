@@ -1,0 +1,91 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-17T15:50:18.758313",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-17T15:50:18.758200",
+    "main_themes": [
+      {
+        "name": "Parenting and Family Dynamics",
+        "description": "Your entries prominently feature experiences related to parenting, particularly the lives of your children, Leta and Marlo, and how their growth impacts family life.",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and Satire",
+        "description": "A consistent thread throughout your writing is humor, where you employ wit and satire to explore everyday challenges, relationships, and the absurdities of life.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Reflection",
+        "description": "Your writing often reflects on personal experiences and transformations, exploring themes of motherhood, self-identity, and emotional struggles.",
+        "entry_ids": []
+      },
+      {
+        "name": "Daily Life and Domesticity",
+        "description": "You document the mundane aspects of daily life, including household management, pets, and community engagements, often illustrating a chaotic yet affectionate home environment.",
+        "entry_ids": []
+      },
+      {
+        "name": "Social Commentary",
+        "description": "Occasional reflections on broader social issues and cultural observations are intertwined in your entries, allowing for a critique of societal norms and personal anecdotes about community experiences.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": {
+      "corpus_overview": "Your journal comprises 500 entries that span from January 2009 to early March 2010, capturing a transformative period in your life as you navigate the challenges of raising two children while also contemplating personal and relational dynamics. The dominant theme is Parenting and Family Dynamics, which accounts for approximately 40% of the entries, showcasing your insights and experiences with your children, notably their growth and development. Supporting themes include Humor and Satire, reflecting around 25% of the entries, with your humorous takes on familial tensions and narratives. Personal Growth and Reflection also play a significant role, comprising about 15% of the corpus, indicating a contemplative attitude towards your evolving identity within the family structure. Notably, entries address Social Commentary and Daily Life, reflecting smaller yet important themes that illustrate your observations of life\u2019s imperfections and societal interactions, which together create an engaging snapshot of contemporary family life.",
+      "temporal_arc": [
+        {
+          "period": "January - April 2009",
+          "theme_composition": "This initial period features a strong focus on pregnancy and the anticipatory excitement surrounding the arrival of Marlo, blended with humorous accounts of navigating parenting with Leta. Family dynamics are explored in earnest, with a heavy emphasis on the challenges of pregnancy.",
+          "linguistic_register": "You employ a lighter, more humorous tone as pregnancy progresses, utilizing wit to address the absurdities faced in everyday family life."
+        },
+        {
+          "period": "May - August 2009",
+          "theme_composition": "The birth of Marlo shifts the focus towards adjusting to motherhood for the second time, with prominent themes of parenting, sleepless nights, and the interplay between duties to both children. Humor still dominates, but there is a noticeable rise in reflections on emotional struggles post-birth.",
+          "linguistic_register": "The tone balances humor with more serious reflections on mental and emotional health, as you navigate new life challenges and family dynamics."
+        },
+        {
+          "period": "September - December 2009",
+          "theme_composition": "Entries during this period cover the transition of Marlo into a more interactive role in the family, featuring reflections on the growth of both children and the implications for family life. Daily life and domestic management become more pronounced themes.",
+          "linguistic_register": "The writing maintains a humorous register while also deepening emotional introspection, particularly regarding balancing two children and the chaos it brings."
+        },
+        {
+          "period": "January 2010 - Early March 2010",
+          "theme_composition": "This period features a strong emphasis on family relationships and social dynamics, with several entries involving interactions with friends and reflections on communal events. Parenting remains central but shifts towards the children\u2019s development and socialization.",
+          "linguistic_register": "The tone shifts to a more reflective style, with moments of vulnerability accompanying the humor, particularly as you engage in discussions about parenting and personal expectations."
+        }
+      ],
+      "synthesis": "Your writing illustrates a journey marked by the dual navigations of raising children and personal introspection, integrating humor as a coping mechanism for the chaotic elements of family life. Through an evolving narrative marked by emotional resilience and humor, you explore the complexities of motherhood and self-identity across distinct temporal arcs, revealing patterns of growth and adaptation. Psychological interpretation may suggest a relational resilience in addressing life's unpredictabilities, as evident through your reflections and humor."
+    },
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "limitations": [
+      "The analysis may not fully capture nuanced emotional states expressed through writing, as subtleties of mood can be difficult to quantify.",
+      "Cultural and contextual factors influencing the writing's reception and content may not be fully addressed, limiting interpretive depth.",
+      "An emphasis on overarching themes may overlook unique individual entries that hold specific emotional or narrative weight."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 50.22,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 49.83,
+    "llm_calls": 1,
+    "input_tokens": 41917,
+    "output_tokens": 1031,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006906
+  }
+}

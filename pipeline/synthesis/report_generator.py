@@ -5,6 +5,34 @@ from datetime import datetime
 from pipeline.embeddings.embedder import _get_client
 from pipeline.schemas import Cluster, JournalEntry, LinguisticFeatures, Report, Theme, TemporalAnalysis
 from pipeline.temporal.analyzer import bucket_entries, corpus_temporal, theme_temporal
+from pipeline.config import STABILITY_BAND
+
+def _theme_shares_per_bin(
+    clusters: list[Cluster],
+    buckets: dict[str, list[str]],
+) -> dict[str, dict[str, float]]:
+    result = {}
+    for cluster in clusters:
+        cluster_ids = set(cluster.entry_ids)
+
+        result[cluster.label] = {
+            period: sum(1 for eid in bin_ids if eid in cluster_ids) / len(bin_ids)
+            for period, bin_ids in buckets.items()
+            if bin_ids
+        }
+
+    return result
+
+def _classify_stability(
+    theme_shares: dict[str, dict[str, float]],
+    band: float = STABILITY_BAND,
+) -> dict[str, bool]:
+    result = {}
+    for theme, shares in theme_shares.items():
+        values = list(shares.values())
+        result[theme] = len(values) < 2 or (max(values) - min(values)) <= band
+
+    return result
 
 
 def _to_str_list(items: list) -> list[str]:
@@ -53,6 +81,11 @@ _SYSTEM_PROMPT = (
     "Hedge all interpretive claims: use language like \"this may suggest...\", "
     "\"this could reflect...\", or \"one possible reading is...\". "
     "Psychological interpretation must be explicitly marked as speculative."
+    "Distinguish between what was journaled about and the person's life or identity more broadly. "
+    "Do not write 'this person's life revolved around X' or 'X defined their identity' — "
+    "prefer 'the journaling during this period centered on X' or 'your entries in this period "
+    "focused heavily on X'."
+
 )
 
 
@@ -67,6 +100,30 @@ def generate(
     generated_at = datetime.utcnow()
 
     buckets = bucket_entries(entries)
+
+    theme_shares = _theme_shares_per_bin(clusters, buckets) if clusters else {}
+    theme_stability = _classify_stability(theme_shares)
+
+    stable_themes  = [t for t, s in theme_stability.items() if s]
+    dynamic_themes = [t for t, s in theme_stability.items() if not s]
+
+    if theme_shares:
+        stability_lines = []
+        if stable_themes:
+            stability_lines.append(
+                f"Stable themes (share varies ≤10pp across all bins): "
+                f"{', '.join(stable_themes)}"
+            )
+        if dynamic_themes:
+            stability_lines.append(
+                f"Dynamic themes (share varies >10pp): "
+                f"{', '.join(dynamic_themes)}"
+            )
+        stability_context = "\n".join(stability_lines)
+    else:
+        stability_context = ""
+
+
     corpus_prof = corpus_temporal(entries, lfe_list, buckets) if lfe_list else {}
     theme_prof = theme_temporal(clusters, lfe_list, buckets) if lfe_list and clusters else {}
 
@@ -77,12 +134,17 @@ def generate(
         corpus_temporal_section = "No LFE data available — linguistic register metrics are not included."
 
     if theme_prof:
+        top_cluster_labels = {
+            c.label for c in sorted(clusters, key=lambda c: len(c.entry_ids), reverse=True)[:5]
+        }
         theme_lines = []
         for theme, periods in theme_prof.items():
+            if theme not in top_cluster_labels:
+                continue
             theme_lines.append(f"Theme: {theme}")
             for period, prof in periods.items():
                 theme_lines.append(f"  {_format_bin(period, prof)}")
-        theme_temporal_section = "Theme-level LFE by bin:\n" + "\n".join(theme_lines)
+        theme_temporal_section = "Theme-level LFE by bin (top 5 themes by size):\n" + "\n".join(theme_lines)
     else:
         theme_temporal_section = ""
 
@@ -164,12 +226,23 @@ A single prose paragraph (second person) covering:
 - Notable minority or marginal themes — not just the largest clusters
 - Overall compositional character
 
+=== Theme Stability ===
+{stability_context}
+
+For STABLE themes listed above:
+- Do not repeat their share month-by-month. State the sustained focus once, clearly.
+- Then check whether the LFE signature (linguistic_register) actually varied even though the share did not. If it did, describe that shift.
+- If both share and LFE are flat, say so directly: "sustained focus with little change in either content or linguistic register." That is a complete and valid finding — do not pad it.
+
+For DYNAMIC themes listed above:
+- Describe the arc normally: how share shifted across periods, and how LFE moved with it.
+
 "temporal_arc"
 A list of objects, one per time bin listed above, in chronological order.
 Merge adjacent bins with fewer than 10 entries into a single object rather than reporting them separately.
 Each object must have exactly:
   "period": the bin label (e.g. "early", "2012-06", "2009–2012")
-  "theme_composition": 1–2 sentences on how theme weight or mix shifted in this period vs. adjacent periods. Name specific themes and approximate proportions.
+  "theme_composition": 1–2 sentences following the stable/dynamic rules above.
   "linguistic_register": 1–2 sentences on how the writing style shifted in this period, citing specific LFE metrics and their values from the data above (e.g. first-person ratio, negation rate, uncertainty rate, past-tense rate, pressure-word rate). If no LFE data is available for this condition, state that explicitly in this field.
 
 "synthesis"
