@@ -1,0 +1,91 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-18T20:19:20.140907",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-18T20:19:20.140780",
+    "main_themes": [
+      {
+        "name": "Parenthood",
+        "description": "Your entries predominantly explore the joys, challenges, and nuances of parenting, particularly regarding your two daughters, Leta and Marlo.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Reflection",
+        "description": "Your writing often features moments of personal introspection, addressing your own experiences with anxiety, body image, and the transitions of motherhood.",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and Everyday Life",
+        "description": "You frequently employ humor to navigate the chaos of daily life, blending anecdotes with light-hearted observations about family dynamics and the absurdities that arise.",
+        "entry_ids": []
+      },
+      {
+        "name": "Pets and Home Life",
+        "description": "Entries reflect your deep affection for your pets, Chuck and Coco, and depict their interactions with your family, contributing to the warmth of your home environment.",
+        "entry_ids": []
+      },
+      {
+        "name": "Creative Expression and Design",
+        "description": "You showcase a passion for design, often discussing home decor projects, personal style, and the creative processes behind your writing and other artistic endeavors.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": {
+      "corpus_overview": "Spanning approximately one year, from January to December 2009, this journal corpus contains 500 entries. The predominant themes include Parenthood and Personal Growth and Reflection, which comprise about 70% of the content, often intertwined with Humor and Everyday Life, which makes up 20%. Notable minority themes include Pets and Home Life, and Creative Expression and Design, reflecting your diverse interests and experiences. The overall compositional character is conversational, engaging, and marked by an enthusiastic, stream-of-consciousness style, allowing for both humor and vulnerability as you navigate this transformative period in your life.",
+      "temporal_arc": [
+        {
+          "period": "January - March 2009",
+          "theme_composition": "Parenthood was the dominant theme as you chronicled your pregnancy with Marlo, interspersed with personal reflections on motherhood and family dynamics. The focus on humor and everyday occurrences became evident as you approached your due date.",
+          "linguistic_register": "The tone during this period is light-hearted and exploratory, infused with excitement and curiosity about the changes ahead, characterized by vivid imagery and colorful descriptions of experiences."
+        },
+        {
+          "period": "April - June 2009",
+          "theme_composition": "As Marlo was born in June, the themes of Parenthood and Personal Growth intensified, reflecting the adjustment to life with two children and the challenges of postpartum experiences. Humor remained prevalent during these entries.",
+          "linguistic_register": "The writing adopted a more reflective and sometimes anxious tone, addressing the exhaustion and difficulties of parenting a newborn while keeping a sense of humor about the chaos."
+        },
+        {
+          "period": "July - September 2009",
+          "theme_composition": "The themes of Parenthood and Humor continued to dominate, with additional focus on personal growth as you navigated postpartum life and family dynamics. The interactions between Leta and Marlo became a central topic.",
+          "linguistic_register": "Linguistic style remained conversational, but a touch of candid introspection may suggest grappling with the complexities of motherhood, including moments of vulnerability and joy."
+        },
+        {
+          "period": "October - December 2009",
+          "theme_composition": "The exploration of Parenthood carried on alongside growing interests in Creative Expression and Design, as evidenced by discussions of your home and personal style. Humor persisted in your entries, juxtaposing challenges with light-hearted anecdotes.",
+          "linguistic_register": "The tone shifts towards a more light-hearted celebration of family life, infused with creativity and joy, as you reflect on the experiences of the past year, revealing a sense of satisfaction and newfound confidence."
+        }
+      ],
+      "synthesis": "The dominant themes of Parenthood and Personal Growth throughout your writing reflect your journey through the complexities of motherhood, personal agency, and self-discovery. The humor woven into these experiences not only highlights the challenges faced but also serves as a coping mechanism, suggesting a speculative desire to maintain perspective amidst the chaos. Over time, the linguistic register transitions from excitement and curiosity to candid introspection, ultimately merging into a celebration of life\u2019s small victories and artistic expressions. This evolution underscores your resilience and adaptability, offering insights into your psychological landscape during a transformative period."
+    },
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "limitations": [
+      "This analysis may not fully capture the nuance of individual entries due to the subjective nature of language interpretation.",
+      "Potential biases in thematic categorization could overlook sub-themes or intersections between categories.",
+      "The psychological interpretations suggested in the analysis are speculative and based on observable patterns rather than clinically validated insights."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 35.96,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 35.58,
+    "llm_calls": 1,
+    "input_tokens": 41917,
+    "output_tokens": 976,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006873
+  }
+}

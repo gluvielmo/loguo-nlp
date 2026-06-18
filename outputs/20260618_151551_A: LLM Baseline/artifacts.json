@@ -1,0 +1,101 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-18T15:15:51.559799",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-18T15:15:51.559658",
+    "main_themes": [
+      {
+        "name": "Parenthood",
+        "description": "Your entries explore the challenges and joys of parenting, including pregnancy, childbirth, and raising children, particularly focusing on the dynamics between Leta and Marlo.",
+        "entry_ids": []
+      },
+      {
+        "name": "Family Life",
+        "description": "You frequently reflect on family gatherings, interactions with relatives, and the evolving relationships within your family, including anecdotes about Chuck and Coco.",
+        "entry_ids": []
+      },
+      {
+        "name": "Home and Decor",
+        "description": "You document home improvement projects and related decor choices, reflecting your aesthetic preferences and the process of creating a comfortable living space for your family.",
+        "entry_ids": []
+      },
+      {
+        "name": "Mental Health",
+        "description": "There are references to your struggles with mental health, particularly postpartum experiences, and the emotional impact of milestones and transitions in your life.",
+        "entry_ids": []
+      },
+      {
+        "name": "Humor and Anecdotal Narration",
+        "description": "Your writing often incorporates humor, providing a light-hearted perspective on the chaos of daily life, parenting, and the antics of the dogs.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth",
+        "description": "The entries reflect on personal development through the lens of motherhood, including the balancing act between being a parent and an individual, as well as navigating periods of anxiety and clarity.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": {
+      "corpus_overview": "Over the course of about seven years, your corpus consists of 500 journal entries reflecting a wide range of experiences, with dominant themes revolving around parenthood and family life, making up approximately 50% of the content. Home and decor projects account for about 20%, while mental health and personal growth themes also feature prominently, alongside humor which serves as a consistent thread. The composite character of your writing is conversational and candid, often infused with levity, as you grapple with the complexities of life transitions and family dynamics.",
+      "temporal_arc": [
+        {
+          "period": "2009",
+          "theme_composition": "The early entries prominently feature themes of pregnancy and the joys and challenges of new parenthood, alongside humorous reflections on household life.",
+          "linguistic_register": "The tone is light-hearted and engaging, employing humor as a coping mechanism during the chaotic early days of parenting."
+        },
+        {
+          "period": "2010",
+          "theme_composition": "Throughout 2010, themes of adjustment in parenting two children emerge, with increased focus on balancing personal identity with family responsibilities.",
+          "linguistic_register": "The writing maintains a humorous style while also revealing more introspective moments, indicating growth and complexity in navigating motherhood."
+        },
+        {
+          "period": "2011-2012",
+          "theme_composition": "Entries from this period reflect on the evolving family dynamic, with a noticeable focus on Leta's development and Marlo's emergence as a personality.",
+          "linguistic_register": "The tone remains warm and humorous, but with an undercurrent of anxiety related to balancing family and personal life, hinting at stressors related to parenting."
+        },
+        {
+          "period": "2013-2014",
+          "theme_composition": "The narratives here revolve around further familial engagements and challenges, including home and decor projects that signify a sense of stability and routine.",
+          "linguistic_register": "The emotional register shifts towards nostalgia and reflection as your writing conveys both fondness for family life and the pressures of sustained responsibilities over time."
+        },
+        {
+          "period": "2015-2016",
+          "theme_composition": "In this latter period, the focus remains on family interactions, home life, and occasional reflections on mental health and the passage of time.",
+          "linguistic_register": "The entries exhibit a mix of humor and seriousness, capturing the complexities of family and mental health considerations, showcasing a mature narrative voice."
+        }
+      ],
+      "synthesis": "The dominant themes of parenthood and family life are deeply intertwined with your humorous and anecdotal writing style, as you navigate the highs and lows of raising children. The shifts in emotional register over time reflect your growth as a parent and as an individual, with humor serving as both a coping mechanism and a way to engage your audience. This blend of humor and poignant reflection may suggest a complex relationship with the challenges of parenthood, where joy and anxiety coexist, pointing to a broader narrative of resilience amid the chaos of family life."
+    },
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "limitations": [
+      "The analysis is limited by its reliance on thematic categorization, which may overlook some nuances in emotional and psychological experiences.",
+      "The review utilizes only qualitative assessments, which may not capture the entirety of the emotional complexity presented in the writing.",
+      "There is a potential bias in interpreting humor and emotional tone, as subjective experiences and reactions to writing can vary widely among readers."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 50.92,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 50.53,
+    "llm_calls": 1,
+    "input_tokens": 41917,
+    "output_tokens": 1007,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006892
+  }
+}
