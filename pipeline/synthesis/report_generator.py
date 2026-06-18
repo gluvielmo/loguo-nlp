@@ -80,11 +80,13 @@ _SYSTEM_PROMPT = (
     "If a finding has an obvious actionable implication, state the finding only — not the implied action. "
     "Hedge all interpretive claims: use language like \"this may suggest...\", "
     "\"this could reflect...\", or \"one possible reading is...\". "
-    "Psychological interpretation must be explicitly marked as speculative."
+    "Psychological interpretation must be explicitly marked as speculative. "
     "Distinguish between what was journaled about and the person's life or identity more broadly. "
     "Do not write 'this person's life revolved around X' or 'X defined their identity' — "
     "prefer 'the journaling during this period centered on X' or 'your entries in this period "
-    "focused heavily on X'."
+    "focused heavily on X'. "
+    "Never invent, estimate, or infer numeric values. Only cite numbers that appear explicitly "
+    "in the data provided to you. If a metric is not in the data, do not mention it."
 
 )
 
@@ -243,7 +245,7 @@ Merge adjacent bins with fewer than 10 entries into a single object rather than 
 Each object must have exactly:
   "period": the bin label (e.g. "early", "2012-06", "2009–2012")
   "theme_composition": 1–2 sentences following the stable/dynamic rules above.
-  "linguistic_register": 1–2 sentences on how the writing style shifted in this period, citing specific LFE metrics and their values from the data above (e.g. first-person ratio, negation rate, uncertainty rate, past-tense rate, pressure-word rate). If no LFE data is available for this condition, state that explicitly in this field.
+  "linguistic_register": If LFE data is shown above, cite specific metrics and their exact values from that data. If no LFE data is available for this condition, write exactly: "No LFE data for this condition." Do not estimate, infer, or invent any numeric values.
 
 "synthesis"
 A single closing paragraph connecting dominant themes to linguistic register patterns over time.

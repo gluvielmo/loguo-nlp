@@ -1,8 +1,8 @@
 import argparse
 from pathlib import Path
 
-ALL_CONDITIONS = list("ABCDE")
-_USES_N_CLUSTERS = set("DE")
+ALL_CONDITIONS = list("ABC")
+_USES_N_CLUSTERS = set("C")
 
 
 def run_condition(condition: str, csv: str, source: str, output: str, n_clusters: int) -> Path:
@@ -14,10 +14,6 @@ def run_condition(condition: str, csv: str, source: str, output: str, n_clusters
         from conditions.condition_b import run
     elif condition == "C":
         from conditions.condition_c import run
-    elif condition == "D":
-        from conditions.condition_d import run
-    elif condition == "E":
-        from conditions.condition_e import run
 
     if condition in _USES_N_CLUSTERS:
         artifacts = run(csv, source=source, n_clusters=n_clusters)
@@ -32,7 +28,7 @@ def run_condition(condition: str, csv: str, source: str, output: str, n_clusters
 def main():
     parser = argparse.ArgumentParser(description="Longitudinal journal analysis pipeline")
     parser.add_argument("--condition", type=str, choices=ALL_CONDITIONS,
-                        help="Which condition to run (A–E). Omit to run all 5.")
+                        help="Which condition to run (A–C). Omit to run all 3.")
     parser.add_argument("--csv", type=str, default="data/dooce_2009_2023.csv",
                         help="Path to the corpus CSV file")
     parser.add_argument("--source", type=str, default="dooce",

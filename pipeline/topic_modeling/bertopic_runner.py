@@ -99,11 +99,14 @@ def assignments_to_clusters(assignments: list[TopicAssignment]) -> list[Cluster]
         sorted_group = sorted(group, key=lambda a: a.probability, reverse=True)
         representative_entry_ids = [a.entry_id for a in sorted_group[:3]]
 
+        raw_label = group[0].topic_label
+        label = raw_label.split("_", 1)[1] if "_" in raw_label else raw_label
+
         cluster = Cluster(
             cluster_id=topic_id,
             entry_ids=entry_ids,
             representative_entry_ids=representative_entry_ids,
-            label=group[0].topic_label,
+            label=label,
             keywords=group[0].keywords,
             labeling_method="bertopic"
         )

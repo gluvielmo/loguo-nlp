@@ -3,6 +3,7 @@ from collections import defaultdict
 
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import normalize
 
 from pipeline.config import IMBALANCE_THRESHOLD
 from pipeline.schemas import JournalEntry, Cluster
@@ -13,12 +14,13 @@ def _pick_n_clusters(
     metric: str = "cosine",
     linkage: str = "complete",
 ) -> tuple[int, float]:
+    normalized = normalize(embeddings)
     best_k, best_score = candidates[0], -1.0
     for k in candidates:
         labels = AgglomerativeClustering(
             n_clusters=k, metric=metric, linkage=linkage
         ).fit_predict(embeddings)
-        score = silhouette_score(embeddings, labels, metric=metric)
+        score = silhouette_score(normalized, labels, metric="euclidean")
         if score > best_score:
             best_score = score
             best_k = k

@@ -1,0 +1,91 @@
+{
+  "condition": "A: LLM Baseline",
+  "corpus_id": "dooce",
+  "run_timestamp": "2026-06-17T20:51:11.681407",
+  "report": {
+    "condition_name": "A: LLM Baseline",
+    "corpus_size": 500,
+    "date_range": [
+      "2009-01-05",
+      "2010-03-03"
+    ],
+    "generated_at": "2026-06-17T20:51:11.681338",
+    "main_themes": [
+      {
+        "name": "Family Life and Parenting",
+        "description": "Your entries reflect a deep engagement with family, chronicling the ups and downs of parenting two daughters. The dynamics of raising children and family relationships stand as a central pillar throughout your writing.",
+        "entry_ids": []
+      },
+      {
+        "name": "Personal Growth and Self-Reflection",
+        "description": "There is a recurring theme of personal introspection related to your experiences with motherhood and the challenges faced therein, including moments of vulnerability and self-doubt.",
+        "entry_ids": []
+      },
+      {
+        "name": "Daily Life and Humorous Observations",
+        "description": "Many entries showcase your daily experiences with humor, capturing the absurdities of family life and parenting, often blending mundane tasks with witty commentary.",
+        "entry_ids": []
+      },
+      {
+        "name": "Health and Wellbeing",
+        "description": "Health\u2014both mental and physical\u2014emerges as a notable theme, addressing your pregnancy experiences, postpartum challenges, and maintaining personal wellness amidst family obligations.",
+        "entry_ids": []
+      },
+      {
+        "name": "Social Interactions and Community",
+        "description": "Your writing often reflects social interactions with friends, neighbors, and extended family. These entries show a vibrant involvement in the community and a keen awareness of social dynamics.",
+        "entry_ids": []
+      }
+    ],
+    "subthemes": [],
+    "temporal_analysis": {
+      "corpus_overview": "Spanning from January 2009 to October 2010, your writing corpus consists of approximately 500 entries. The dominant themes include family life and parenting, which constitute nearly half of the entries, followed by personal growth and self-reflection, which appear in about a quarter of the corpus. Daily life and humorous observations are also prominent, alongside health and wellbeing, and occasional social interactions, which add depth and variety to the overall narrative. The overall compositional character is marked by a conversational style, integrating humor and vulnerability, creating an engaging and relatable voice throughout your entries.",
+      "temporal_arc": [
+        {
+          "period": "2009: Early Parenthood",
+          "theme_composition": "In this initial period, themes of family life and parenting overwhelmingly dominate, as you navigate the early stages of raising two children, Leta and Marlo. Reflections on personal growth and the challenges of motherhood are also prominent.",
+          "linguistic_register": "The tone is predominantly light-hearted and humorous, although moments of vulnerability seep through, reflecting the hectic emotions tied to early parenthood."
+        },
+        {
+          "period": "Late 2009: Adapting to Change",
+          "theme_composition": "The focus continues on family life but begins to integrate more discussions of personal identity and health, especially following Marlo's birth and the emotional complexities that accompany this transition.",
+          "linguistic_register": "The writing exhibits a more reflective tone, with a blend of humor as you adapt to the challenges of having two young children, indicative of increasing self-awareness and complexity."
+        },
+        {
+          "period": "Early 2010: Community and Support",
+          "theme_composition": "This period sees a heightened emphasis on social interactions and community involvement, as you discuss events, gatherings, and relationships with friends and family.",
+          "linguistic_register": "The tone remains conversational, characterized by a sense of camaraderie and shared experience, balancing humorous anecdotes with more earnest reflections on support systems."
+        },
+        {
+          "period": "Mid to Late 2010: Reflection and Growth",
+          "theme_composition": "As the year progresses, themes of health and wellbeing emerge alongside parenting, grappling with your own needs as a mother while caring for your children, indicating a shift toward self-care and introspection.",
+          "linguistic_register": "The emotional tone fluctuates between light-hearted humor and deeper reflections, showcasing a maturing awareness of the complexities of motherhood and personal identity."
+        }
+      ],
+      "synthesis": "Throughout your writing, the dominant themes of family life and personal growth are interwoven with humor and observational wit. As the corpus progresses from early motherhood into a deeper exploration of identity and community, the tonal shifts reflect your growing complexities in handling parenting responsibilities and self-awareness. The combination of these elements indicates a potential psychological development marked by introspection and adaptability, suggesting a nuanced understanding of the challenges and joys inherent in parenthood."
+    },
+    "linguistic_patterns": {},
+    "representative_evidence": [],
+    "limitations": [
+      "The analysis is based solely on the selected corpus and may not represent the full range of experiences or insights available in your personal writing.",
+      "Contextual factors outside of the entries, such as broader life events or emotional states, may influence the themes in ways not captured within the text.",
+      "The analysis primarily focuses on dominant and marginal themes and does not deeply explore the intersectionality of these themes within your life experiences and societal contexts."
+    ]
+  },
+  "topics_or_clusters": [],
+  "lfe_per_entry": [],
+  "lfe_aggregated": {},
+  "metrics": {
+    "total_seconds": 38.23,
+    "preprocessing_seconds": 0.0,
+    "llm_seconds": 37.83,
+    "llm_calls": 1,
+    "input_tokens": 41917,
+    "output_tokens": 975,
+    "generation_model": "gpt-4o-mini",
+    "embedding_tokens": 0,
+    "embedding_entries": 0,
+    "embedding_model": "",
+    "estimated_cost_usd": 0.006873
+  }
+}
